@@ -2,7 +2,13 @@ import { useRef, useEffect } from "react";
 import { imagesByCommunity } from "../constants/imagesByCommunity";
 import type { CommunityKey, RefGroup } from "../types/imagesByCommunity";
 
-export function useIcadActions() {
+export function useIcadActions({
+    onSelectCommunity,
+    onBackToHome
+}: {
+    onSelectCommunity: (key: CommunityKey) => void;
+    onBackToHome: () => void;
+}) {
     const TEXT_CLICK_COLOR = "#910811";
     const BACKGROUND_CLICK_COLOR = "#ffffff";
     const BORDER_CLICK_COLOR = "#910811";
@@ -28,6 +34,49 @@ export function useIcadActions() {
     };
 
     useEffect(() => {
+        const specialKeys = [
+            "sdeiraLogo",
+            "homeIcon",
+            "aryamLogo",
+            "backIcon",
+            "aboutAryamIcadIcon"
+        ];
+
+        specialKeys.forEach((key) => {
+            const el = refs.current[key]?.[key as keyof RefGroup] as SVGElement;
+
+            if (!el) return;
+
+            const onClick = () => {
+                if (key === "aboutAryamIcadIcon") {
+                    window.open("https://aryam.glmaagencyprojects.com/en/", "_blank");
+                    return;
+                }
+
+                if (key === "homeIcon" || key === "sdeiraLogo") {
+                    window.open("https://sdeiragroup.ae/", "_blank");
+                    return;
+                }
+
+                if (key === "backIcon") {
+                    onBackToHome();
+                    return;
+                }
+            };
+
+            const onEnter = () => {
+                el.style.cursor = "pointer";
+                el.style.opacity = "0.8";
+            };
+
+            const onLeave = () => {
+                el.style.opacity = "1";
+            };
+
+            el.addEventListener("click", onClick);
+            el.addEventListener("mouseenter", onEnter);
+            el.addEventListener("mouseleave", onLeave);
+        });
         const keys = Object.keys(refs.current);
         const getParts = (group: RefGroup) => {
             const bg = group.square?.querySelectorAll<SVGElement>(".st53") || [];
@@ -154,7 +203,27 @@ export function useIcadActions() {
 
                     activeKey.current = key;
                     activateClick(key);
-                    showAlert(key)
+                    if (key === "aboutAryamIcad") {
+                        window.open("https://aryam.glmaagencyprojects.com/en/", "_blank");
+                        return;
+                    }
+
+                    if (key === "homeLogo") {
+                        window.open("https://sdeiragroup.ae/", "_blank");
+                        return;
+                    }
+
+                    if (key === "backIcon") {
+                        onBackToHome();
+                        return;
+                    }
+
+                    if (key in imagesByCommunity) {
+                        onSelectCommunity(key as CommunityKey);
+                        return;
+                    }
+
+                    showAlert(key);
                 };
 
                 el.addEventListener("mouseenter", onEnter);

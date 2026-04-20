@@ -32,4 +32,4 @@ export type RefGroup = {
     aboutAryamIcadIcon?: SVGElement | null;
 };
 
-export type CommunityKey = keyof typeof imagesByCommunity;
+export type CommunityKey = keyof imagesByCommunityObject;
