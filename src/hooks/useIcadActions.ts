@@ -1,46 +1,18 @@
 import { useRef, useEffect } from "react";
-
-type RefGroup = {
-    square?: SVGElement | null;
-    icon?: SVGElement | null;
-    text?: SVGElement | null;
-    sdeiraLogo?: SVGElement | null;
-    homeIcon?: SVGAElement | null;
-    aryamLogo?: SVGElement | null;
-    backIcon?: SVGElement | null;
-    aboutAryamIcadIcon?: SVGElement | null;
-};
+import { imagesByCommunity } from "../constants/imagesByCommunity";
+import type { CommunityKey, RefGroup } from "../types/imagesByCommunity";
 
 export function useIcadActions() {
-
-    // Click Config
     const TEXT_CLICK_COLOR = "#910811";
     const BACKGROUND_CLICK_COLOR = "#ffffff";
     const BORDER_CLICK_COLOR = "#910811";
-    // Hover Config
     const TEXT_HOVER_COLOR = "#910811";
     const BACKGROUND_HOVER_COLOR = "#ffffff";
     const BORDER_HOVER_COLOR = "#910811";
-    const LABELS: Record<string, string> = {
-        alReem: "Al Reem Community",
-        alMesk: "Al Mesk Community",
-        icadMall: "ICAD Mall",
-        mosque: "Mosque",
-        sportsHall: "Sports Hall",
-        alNaseem: "Al Naseem Community",
-        alSahab1: "Al Sahab Phase 1",
-        alSahab2: "Al Sahab Phase 2",
-        alDhabi1: "Al Dhabi 1",
-        alDhabi2: "Al Dhabi 2",
-        alDhabi3: "Al Dhabi 3",
-        alYass1: "Al Yass 1",
-        alYass2: "Al Yass 2",
-        alMurjan: "Al Murjan Community",
-    };
 
     const showAlert = (key: string) => {
-        const name = LABELS[key] || key;
-
+        const community = imagesByCommunity[key as CommunityKey];
+        const name = community?.title || key;
         alert(`📍 ${name}\n\nClick confirmed. You are exploring this location.`);
     };
 

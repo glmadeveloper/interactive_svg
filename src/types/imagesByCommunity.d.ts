@@ -20,3 +20,16 @@ export interface imagesByCommunityObject {
     alYass2: CommunityData;
     alMurjan: CommunityData;
 }
+
+export type RefGroup = {
+    square?: SVGElement | null;
+    icon?: SVGElement | null;
+    text?: SVGElement | null;
+    sdeiraLogo?: SVGElement | null;
+    homeIcon?: SVGAElement | null;
+    aryamLogo?: SVGElement | null;
+    backIcon?: SVGElement | null;
+    aboutAryamIcadIcon?: SVGElement | null;
+};
+
+export type CommunityKey = keyof typeof imagesByCommunity;
