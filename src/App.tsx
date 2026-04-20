@@ -65,7 +65,7 @@ export default function App() {
       <CommunityModal
         selectedCommunityData={selectedCommunityData}
         showCommunityVideo={showCommunityVideo}
-        onShowVideo={() => setShowCommunityVideo(true)}
+        onShowVideo={() => setShowCommunityVideo(!showCommunityVideo)}
         onClose={() => setSelectedCommunity(null)}
       />
     </>
