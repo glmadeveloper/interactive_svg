@@ -1,7 +1,6 @@
 import { useState } from "react";
 import IcadSVG from "./components/icons/IcadSVG";
 import CommunityModal from "./components/CommunityModal";
-import { icad_image } from "./exports/images";
 import { homeVideo } from "./exports/videos";
 import { imagesByCommunity } from "./constants/imagesByCommunity";
 import type { CommunityKey } from "./types/imagesByCommunity";
@@ -52,7 +51,6 @@ export default function App() {
         !isHomeVideoPlaying && (
           <div
             className="relative w-full h-screen bg-cover bg-center"
-            style={{ backgroundImage: `url(${icad_image})` }}
           >
             <IcadSVG
               onSelectCommunity={handleSelectCommunity}

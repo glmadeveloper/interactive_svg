@@ -48,7 +48,7 @@ export function useIcadActions({
             if (!el) return;
 
             const onClick = () => {
-                if (key === "aboutAryamIcadIcon") {
+                if (key === "aboutAryamIcadIcon" || key === "aryamLogo") {
                     window.open("https://aryam.glmaagencyprojects.com/en/", "_blank");
                     return;
                 }
