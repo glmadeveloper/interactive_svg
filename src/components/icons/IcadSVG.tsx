@@ -1,6 +1,6 @@
 import { icad_image } from "../../exports/images";
 import { useIcadActions } from "../../hooks/useIcadActions"
-import type { CommunityKey } from "../../types/imagesByCommunity";
+import type { CommunityKey } from "../../types/communities";
 
 type IcadSVGProps = {
     onSelectCommunity: (key: string) => void;

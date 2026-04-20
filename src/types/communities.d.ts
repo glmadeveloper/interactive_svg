@@ -4,7 +4,7 @@ export interface CommunityData {
     images: string[];
 }
 
-export interface imagesByCommunityObject {
+export interface CommunitiesObject {
     alReem: CommunityData;
     alMesk: CommunityData;
     icadMall: CommunityData;
@@ -32,4 +32,4 @@ export type RefGroup = {
     aboutAryamIcadIcon?: SVGElement | null;
 };
 
-export type CommunityKey = keyof imagesByCommunityObject;
+export type CommunityKey = keyof CommunitiesObject;

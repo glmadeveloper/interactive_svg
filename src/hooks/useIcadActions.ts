@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
-import { imagesByCommunity } from "../constants/imagesByCommunity";
-import type { CommunityKey, RefGroup } from "../types/imagesByCommunity";
+import { communities } from "../constants/communities";
+import type { CommunityKey, RefGroup } from "../types/communities";
 
 export function useIcadActions({
     onSelectCommunity,
@@ -17,7 +17,7 @@ export function useIcadActions({
     const BORDER_HOVER_COLOR = "#910811";
 
     const showAlert = (key: string) => {
-        const community = imagesByCommunity[key as CommunityKey];
+        const community = communities[key as CommunityKey];
         const name = community?.title || key;
         alert(`📍 ${name}\n\nClick confirmed. You are exploring this location.`);
     };
@@ -142,7 +142,7 @@ export function useIcadActions({
                         window.open("https://sdeiragroup.ae/", "_blank");
                     } else if (key === "backIcon") {
                         onBackToHome();
-                    } else if (key in imagesByCommunity) {
+                    } else if (key in communities) {
                         onSelectCommunity(key as CommunityKey);
                     } else {
                         showAlert(key);

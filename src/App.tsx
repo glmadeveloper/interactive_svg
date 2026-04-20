@@ -2,8 +2,8 @@ import { useState } from "react";
 import IcadSVG from "./components/icons/IcadSVG";
 import CommunityModal from "./components/CommunityModal";
 import { homeVideo } from "./exports/videos";
-import { imagesByCommunity } from "./constants/imagesByCommunity";
-import type { CommunityKey } from "./types/imagesByCommunity";
+import { communities } from "./constants/communities";
+import type { CommunityKey } from "./types/communities";
 import Preloader from "./components/Preloader";
 
 export default function App() {
@@ -11,10 +11,10 @@ export default function App() {
   const [selectedCommunity, setSelectedCommunity] = useState<CommunityKey | null>(null);
   const [showCommunityVideo, setShowCommunityVideo] = useState(false);
 
-  const selectedCommunityData = selectedCommunity ? imagesByCommunity[selectedCommunity] : null;
+  const selectedCommunityData = selectedCommunity ? communities[selectedCommunity] : null;
 
   const handleSelectCommunity = (key: string) => {
-    if (key in imagesByCommunity) {
+    if (key in communities) {
       setSelectedCommunity(key as CommunityKey);
       setShowCommunityVideo(false);
       setIsHomeVideoPlaying(false);

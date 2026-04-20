@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { CommunityData } from "../types/imagesByCommunity";
+import type { CommunityData } from "../types/communities";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
