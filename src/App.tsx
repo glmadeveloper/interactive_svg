@@ -4,6 +4,7 @@ import CommunityModal from "./components/CommunityModal";
 import { homeVideo } from "./exports/videos";
 import { imagesByCommunity } from "./constants/imagesByCommunity";
 import type { CommunityKey } from "./types/imagesByCommunity";
+import Preloader from "./components/Preloader";
 
 export default function App() {
   const [isHomeVideoPlaying, setIsHomeVideoPlaying] = useState(true);
@@ -31,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <Preloader>
       {isHomeVideoPlaying && (
         <div className="relative w-full h-screen overflow-hidden bg-black">
           <div className="absolute inset-0 z-20 bg-black">
@@ -66,6 +67,6 @@ export default function App() {
         onShowVideo={() => setShowCommunityVideo(!showCommunityVideo)}
         onClose={() => setSelectedCommunity(null)}
       />
-    </>
+    </Preloader>
   );
 }
