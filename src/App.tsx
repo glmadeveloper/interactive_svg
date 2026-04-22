@@ -1,72 +1,104 @@
-import { useState } from "react";
-import IcadSVG from "./components/icons/IcadSVG";
-import CommunityModal from "./components/CommunityModal";
+import { useEffect, useRef, useState } from "react";
 import { homeVideo } from "./exports/videos";
-import { communities } from "./constants/communities";
-import type { CommunityKey } from "./types/communities";
+import type { Community } from "./types/communities";
 import Preloader from "./components/Preloader";
+import Home from "./svgs/Home";
+import RenderPage from "./components/RenderPage";
 
 export default function App() {
-  const [isHomeVideoPlaying, setIsHomeVideoPlaying] = useState(true);
-  const [selectedCommunity, setSelectedCommunity] = useState<CommunityKey | null>(null);
-  const [showCommunityVideo, setShowCommunityVideo] = useState(false);
+  const [selectedCommunity, setselectedCommunity] = useState<Community>("icad");
+  const [showIntroVideo, setShowIntroVideo] = useState(true);
+  const [showScreensaver, setShowScreensaver] = useState(false);
 
-  const selectedCommunityData = selectedCommunity ? communities[selectedCommunity] : null;
+  const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleSelectCommunity = (key: string) => {
-    if (key in communities) {
-      setSelectedCommunity(key as CommunityKey);
-      setShowCommunityVideo(false);
-      setIsHomeVideoPlaying(false);
+  const clearIdleTimer = () => {
+    if (idleTimer.current) {
+      clearTimeout(idleTimer.current);
+      idleTimer.current = null;
     }
   };
 
-  const handleBackToHome = () => {
-    setSelectedCommunity(null);
-    setShowCommunityVideo(false);
-    setIsHomeVideoPlaying(true);
+  const startIdleTimer = () => {
+    clearIdleTimer();
+    idleTimer.current = setTimeout(() => {
+      setShowScreensaver(true);
+    }, 20000);
   };
 
-  const handleHomeVideoEnded = () => {
-    setIsHomeVideoPlaying(false);
+  useEffect(() => {
+    const handleUserActivity = () => {
+      if (showIntroVideo) return;
+
+      if (showScreensaver) {
+        setShowScreensaver(false);
+      }
+
+      startIdleTimer();
+    };
+
+    const events = ["mousemove", "mousedown", "keydown", "touchstart"];
+    events.forEach((event) =>
+      window.addEventListener(event, handleUserActivity)
+    );
+
+    if (!showIntroVideo && !showScreensaver) {
+      startIdleTimer();
+    } else {
+      clearIdleTimer();
+    }
+
+    return () => {
+      events.forEach((event) =>
+        window.removeEventListener(event, handleUserActivity)
+      );
+      clearIdleTimer();
+    };
+  }, [showIntroVideo, showScreensaver]);
+
+  const handleIntroVideoEnded = () => {
+    setShowIntroVideo(false);
   };
 
   return (
     <Preloader>
-      {isHomeVideoPlaying && (
-        <div className="relative w-full h-screen overflow-hidden bg-black">
-          <div className="absolute inset-0 z-20 bg-black">
-            <video
-              className="w-full h-full object-cover"
-              src={homeVideo}
-              autoPlay
-              muted
-              playsInline
-              onEnded={handleHomeVideoEnded}
-            />
-          </div>
+      {showIntroVideo && (
+        <div className="absolute inset-0 z-50 bg-black">
+          <video
+            className="w-full h-full object-cover"
+            src={homeVideo}
+            autoPlay
+            muted
+            playsInline
+            onEnded={handleIntroVideoEnded}
+          />
         </div>
       )}
 
-      {
-        !isHomeVideoPlaying && (
-          <div
-            className="relative w-full h-screen bg-cover bg-center"
-          >
-            <IcadSVG
-              onSelectCommunity={handleSelectCommunity}
-              onBackToHome={handleBackToHome}
-            />
-          </div>
-        )
-      }
+      {showScreensaver && !showIntroVideo && (
+        <div className="absolute inset-0 z-40 bg-black">
+          <video
+            className="w-full h-full object-cover"
+            src={homeVideo}
+            autoPlay
+            muted
+            playsInline
+          />
+        </div>
+      )}
 
-      <CommunityModal
-        selectedCommunityData={selectedCommunityData}
-        showCommunityVideo={showCommunityVideo}
-        onShowVideo={() => setShowCommunityVideo(!showCommunityVideo)}
-        onClose={() => setSelectedCommunity(null)}
-      />
+      {!showIntroVideo && (
+        <div className="relative w-full h-screen">
+          {selectedCommunity === "home" ? (
+            <Home setSelectedCommunity={setselectedCommunity} />
+          ) : (
+            <RenderPage
+              selectedCommunity={selectedCommunity}
+              setIsHomeVideoPlaying={() => setShowIntroVideo(true)}
+            />
+          )}
+        </div>
+      )}
     </Preloader>
   );
 }

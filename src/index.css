@@ -4,6 +4,8 @@
   --primary-color: #910811;
   --secondary-color: #ffe96c;
   --third-color: #ffa90a;
+  --modal-primary-color: #dbdad7;
+  /* --modal-secondary-color: #58595B; */
 }
 
 body {
@@ -48,7 +50,9 @@ body {
   }
 
   50% {
-    text-shadow: 0 0 30px rgba(255, 233, 108, 0.6), 0 0 50px rgba(255, 233, 108, 0.2);
+    text-shadow:
+      0 0 30px rgba(255, 233, 108, 0.6),
+      0 0 50px rgba(255, 233, 108, 0.2);
   }
 
   100% {
@@ -73,7 +77,12 @@ body {
 }
 
 .shimmer-sweep {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   animation: shimmerSweep 3s infinite ease-in-out;
 }
 
@@ -96,3 +105,19 @@ body {
 }
 
 /* End Preloader Animation */
+
+/* Start Scrollbar */
+.custom-scrollbar-minimal::-webkit-scrollbar {
+  width: 1px;
+}
+.custom-scrollbar-minimal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar-minimal::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar-minimal::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+/* Start Scrollbar */

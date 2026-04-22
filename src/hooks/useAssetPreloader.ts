@@ -29,8 +29,7 @@ export const useAssetPreloader = (): UseAssetPreloaderReturn => {
         const uniqueVideos = Array.from(new Set(Object.values(videos) as string[]));
 
         const criticalImageNames = new Set([
-            images.icad_image,
-            images.icad_svg,
+            images.icad_icad_image,
         ]);
 
         const criticalVideoNames = new Set([

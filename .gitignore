@@ -25,3 +25,12 @@ dist-ssr
 
 # .md files
 *.md
+
+# .xlsx files
+*.xlsx
+
+# .assets files
+/src/assets
+
+# generate_images.js file
+generate_images.js

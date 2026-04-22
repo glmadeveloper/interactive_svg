@@ -1,13 +1,16 @@
 import { useRef, useEffect } from "react";
-import { communities } from "../constants/communities";
 import type { CommunityKey, RefGroup } from "../types/communities";
 
 export function useIcadActions({
-    onSelectCommunity,
-    onBackToHome
+    onSelectBuilding,
+    onBackToHome,
+    data,
+    communityUrl
 }: {
-    onSelectCommunity: (key: CommunityKey) => void;
+    onSelectBuilding: (key: CommunityKey) => void;
     onBackToHome: () => void;
+    data: Record<string, any>;
+    communityUrl: string;
 }) {
     const TEXT_CLICK_COLOR = "#910811";
     const BACKGROUND_CLICK_COLOR = "#ffffff";
@@ -17,7 +20,7 @@ export function useIcadActions({
     const BORDER_HOVER_COLOR = "#910811";
 
     const showAlert = (key: string) => {
-        const community = communities[key as CommunityKey];
+        const community = data[key as CommunityKey];
         const name = community?.title || key;
         alert(`📍 ${name}\n\nClick confirmed. You are exploring this location.`);
     };
@@ -25,7 +28,7 @@ export function useIcadActions({
     const refs = useRef<Record<string, RefGroup>>({});
     const activeKey = useRef<string | null>(null);
 
-    const setRef = (key: string, type: keyof RefGroup) => (el: SVGElement | SVGAElement | null) => {
+    const setRef = (key: CommunityKey, type: keyof RefGroup) => (el: SVGElement | SVGAElement | null) => {
         if (!refs.current[key]) {
             refs.current[key] = {};
         }
@@ -106,8 +109,8 @@ export function useIcadActions({
             // Collect ALL possible interactive elements in this group
             const targets = [
                 group.square, group.icon, group.text,
-                group.sdeiraLogo, group.homeIcon, group.aryamLogo,
-                group.backIcon, group.aboutAryamIcadIcon
+                group.sdeiraLogo, group.homeIcon, group.communityLogo,
+                group.backIcon, group.aboutCommunity
             ].filter((el): el is SVGElement => el instanceof SVGElement);
 
             targets.forEach((el) => {
@@ -136,14 +139,16 @@ export function useIcadActions({
                     activateClick(key);
 
                     // Unified Action Logic
-                    if (key === "aboutAryamIcadIcon" || key === "aryamLogo" || key === "aboutAryamIcad") {
-                        window.open("https://aryam.glmaagencyprojects.com/en/", "_blank");
-                    } else if (key === "homeIcon" || key === "sdeiraLogo" || key === "homeLogo") {
+                    if (key === "aboutCommunity") {
+                        onSelectBuilding(key as CommunityKey);
+                    } else if (key === "homeIcon" || key === "sdeiraLogo") {
                         window.open("https://sdeiragroup.ae/", "_blank");
+                    } else if (key === "communityLogo") {
+                        window.open(communityUrl, "_blank");
                     } else if (key === "backIcon") {
                         onBackToHome();
-                    } else if (key in communities) {
-                        onSelectCommunity(key as CommunityKey);
+                    } else if (key in data) {
+                        onSelectBuilding(key as CommunityKey);
                     } else {
                         showAlert(key);
                     }
