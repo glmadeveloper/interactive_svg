@@ -29,7 +29,7 @@ import icad_almesk_s6_2_br_type_4x_8_image from "../assets/images/ICAD/Almesk S6
 import icad_almesk_s7_2_br_type_4x_8_image from "../assets/images/ICAD/Almesk S7 2-BR TYPE@4x-8.png";
 import icad_alyas_6_beds_image from "../assets/images/ICAD/ALYAS  6 Beds .png";
 import icad_icad_mosuqe_image from "../assets/images/ICAD/ICAD MOSUQE.png";
-import icad_icad_image from "../assets/images/ICAD/ICAD.jpg";
+import icad_icad_image from "../assets/images/ICAD/ICAD.png";
 import icad_sports_hall_image from "../assets/images/ICAD/sports hall.png";
 import icad_square_mall_image from "../assets/images/ICAD/Square Mall.png";
 // End ICAD Images

@@ -32,5 +32,6 @@ dist-ssr
 # .assets files
 /src/assets
 
-# generate_images.js file
+# generate_images.js & read_base_64_image.js file
 generate_images.js
+read_base_64_image.js
