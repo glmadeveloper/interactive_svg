@@ -1,11 +1,6 @@
 import {
     razeen_mugharaq_image,
     razeen_clinic_image,
-    razeen_dining_hall_image,
-    razeen_mosq_image,
-    razeen_razeen_stadiums_image,
-    razeen_k_market_image,
-    razeen_kitchen_image,
     mougharaq_kitchen_1,
     mougharaq_kitchen_2,
     mougharaq_mosque_1,
