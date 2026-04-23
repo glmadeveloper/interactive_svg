@@ -25,7 +25,7 @@ import type { MugharraqCommunityObject } from "../types/communities";
 export const MUGHARRAQ: MugharraqCommunityObject = {
     title: "Mugharraq Community",
     video: communityVideo,
-    communityLogoUrl: "https://aryam.glmaagencyprojects.com/en/",
+    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
     data: {
         centralKitchen: {
             title: "CENTRAL KITCHEN",

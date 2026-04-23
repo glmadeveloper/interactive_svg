@@ -19,7 +19,7 @@ import type { RazeenCommunityObject } from "../types/communities";
 export const RAZEEN: RazeenCommunityObject = {
     title: "Razeen Community",
     video: communityVideo,
-    communityLogoUrl: "https://aryam.glmaagencyprojects.com/en/",
+    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
     data: {
         administration: {
             title: "ADMINISTRATION",

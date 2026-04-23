@@ -9,7 +9,7 @@ import type { Maamorah_B_CommunityObject } from "../types/communities";
 export const MAAMORAH_B: Maamorah_B_CommunityObject = {
     title: "Maamorah B Community",
     video: communityVideo,
-    communityLogoUrl: "https://aryam.glmaagencyprojects.com/en/",
+    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
     data: {
         commercialShops: {
             title: "COMMERCIAL SHOPS",

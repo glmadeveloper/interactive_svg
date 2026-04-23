@@ -15,7 +15,7 @@ import type { SadeemCommunityObject } from "../types/communities";
 export const SADEEM: SadeemCommunityObject = {
     title: "Sadeem Community",
     video: communityVideo,
-    communityLogoUrl: "https://aryam.glmaagencyprojects.com/en/",
+    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
     data: {
         administration: {
             title: "ADMINISTRATION",
