@@ -4,7 +4,6 @@ import type { Community } from "./types/communities";
 import Preloader from "./components/Preloader";
 import Home from "./svgs/Home";
 import RenderPage from "./components/RenderPage";
-import { icad_icad_image } from "./exports/images";
 
 export default function App() {
   const [selectedCommunity, setselectedCommunity] = useState<Community>("icad");
@@ -85,7 +84,7 @@ export default function App() {
             preload="metadata"
             loop
             autoPlay
-            poster={icad_icad_image}
+            poster={'/images/ICAD/ICAD.png'}
             muted
             playsInline
           />
