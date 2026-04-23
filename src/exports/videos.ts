@@ -1,5 +1,5 @@
-import homeVideo from "../assets/videos/intro_2.mp4"
-import communityVideo from "../assets/videos/intro_2.mp4"
+import homeVideo from "/videos/intro_2.mp4"
+import communityVideo from "/videos/intro_2.mp4"
 
 export {
     homeVideo,
