@@ -226,21 +226,21 @@ export const ICAD: IcadCommunityObject = {
             images: [icad_al_sahab_1_4_pax_bed_room_image]
         },
         alDhabi1: {
-            title: "AL SAHAB 1 – STAFF ACCOMMODATION",
-            description: "Residential buildings designed for structured staff accommodation with standardized flat layouts. Optimized for efficient occupancy and daily living.",
+            title: "AL DHABI – STAFF ACCOMMODATION",
+            description: "High-capacity residential zone designed for large workforce accommodation with dense flat distribution and efficient circulation.",
             category_name: "BUILDING OVERVIEW",
             properties: [
                 {
                     title: "Capacity",
-                    value: "1,152 Staff"
+                    value: "13,320 Staff"
                 },
                 {
                     title: "Buildings",
-                    value: "8 Buildings"
+                    value: "18 Buildings"
                 },
                 {
                     title: "Room Types",
-                    value: "1x3 - 66 m2"
+                    value: "5x1 - 66 m2"
                 },
                 {
                     title: "Floors",
@@ -250,21 +250,21 @@ export const ICAD: IcadCommunityObject = {
             images: [icad_al_dhabi_1_image]
         },
         alDhabi2: {
-            title: "AL SAHAB 2 – STAFF ACCOMMODATION",
-            description: "Residential buildings designed for structured staff accommodation with standardized flat layouts. Optimized for efficient occupancy and daily living.",
+            title: "AL DHABI – STAFF ACCOMMODATION",
+            description: "High-capacity residential zone designed for large workforce accommodation with dense flat distribution and efficient circulation.",
             category_name: "BUILDING OVERVIEW",
             properties: [
                 {
                     title: "Capacity",
-                    value: "1,152 Staff"
+                    value: "13,320 Staff"
                 },
                 {
                     title: "Buildings",
-                    value: "8 Buildings"
+                    value: "18 Buildings"
                 },
                 {
                     title: "Room Types",
-                    value: "1x3 - 66 m2"
+                    value: "5x1 - 66 m2"
                 },
                 {
                     title: "Floors",
@@ -274,21 +274,21 @@ export const ICAD: IcadCommunityObject = {
             images: [icad_al_dhabi_2_image]
         },
         alDhabi3: {
-            title: "AL SAHAB 3 – STAFF ACCOMMODATION",
-            description: "Residential buildings designed for structured staff accommodation with standardized flat layouts. Optimized for efficient occupancy and daily living.",
+            title: "AL DHABI – STAFF ACCOMMODATION",
+            description: "High-capacity residential zone designed for large workforce accommodation with dense flat distribution and efficient circulation.",
             category_name: "BUILDING OVERVIEW",
             properties: [
                 {
                     title: "Capacity",
-                    value: "1,152 Staff"
+                    value: "13,320 Staff"
                 },
                 {
                     title: "Buildings",
-                    value: "8 Buildings"
+                    value: "18 Buildings"
                 },
                 {
                     title: "Room Types",
-                    value: "1x3 - 66 m2"
+                    value: "5x1 - 66 m2"
                 },
                 {
                     title: "Floors",

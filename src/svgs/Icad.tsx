@@ -1,10 +1,10 @@
 import { ICAD } from "../constants/Icad";
 import { icad_icad_image, razeen_bar_image } from "../exports/images";
-import { useCommunityActions } from "../hooks/useCommunityActions"
+import { useBuildingActions } from "../hooks/useBuildingActions"
 import type { CommunityKey } from "../types/communities";
 
 export default function Icad({ onSelectBuilding, onBackToHome }: SVGPageProps) {
-    const { setRef } = useCommunityActions({
+    const { setRef } = useBuildingActions({
         onSelectBuilding: (key: CommunityKey) => {
             onSelectBuilding(key);
         },
