@@ -161,7 +161,7 @@ export const useAssetPreloader = (): UseAssetPreloaderReturn => {
                     }
                 };
 
-                video.preload = "auto";
+                video.preload = "metadata";
                 video.muted = true;
                 video.playsInline = true;
                 video.src = src;

@@ -67,6 +67,7 @@ export default function App() {
           <video
             className="w-full h-full object-cover"
             src={homeVideo}
+            preload="auto"
             autoPlay
             muted
             playsInline
