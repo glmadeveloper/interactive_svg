@@ -67,7 +67,7 @@ export default function App() {
           <video
             className="w-full h-full object-cover"
             src={homeVideo}
-            preload="auto"
+            preload="metadata"
             autoPlay
             muted
             playsInline
@@ -81,6 +81,8 @@ export default function App() {
           <video
             className="w-full h-full object-cover"
             src={homeVideo}
+            preload="metadata"
+            loop
             autoPlay
             muted
             playsInline
