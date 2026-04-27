@@ -598,7 +598,7 @@ export default function Icad({ onSelectBuilding, onBackToHome }: SVGPageProps) {
                                 <g className="st53">
                                     <rect className="st56" x={2369} y="911.67" width="274.34" height="13.06" />
                                 </g>
-                                <g className="st6">
+                                <g ref={setRef("alNaseem",'icon')} className="st6">
                                     <g>
                                         <path className="st17" d="M2760.88,885.92v-40.53h12.31v-15.38h40.38v15.38h12.31v40.53h7.88v4.65h-80.76v-4.65h7.88ZM2813.57,885.92h7.58v-35.88h-7.58v35.88ZM2787.38,885.92h11.99v-11.79h-11.99v11.79ZM2777.92,845.38v40.53h4.73v-16.45h21.46v16.45h4.73v-51.26h-30.92v10.73ZM2765.61,885.92h7.58v-35.88h-7.58v35.88Z" />
                                         <path className="st17" d="M2796.52,859.65h7.59v4.65h-7.59v-4.65Z" />

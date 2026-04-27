@@ -72,9 +72,11 @@ import razeen_razeen_stadiums_image from "/images/Razeen/Razeen Stadiums.png";
 import razeen_sadeem_aryam_sadeem_10_image from "/images/Razeen/Sadeem/Aryam-Sadeem-10.png";
 import razeen_sadeem_aryam_sadeem_4_image from "/images/Razeen/Sadeem/Aryam-Sadeem-4.png";
 import razeen_sadeem_aryam_sadeem_6_image from "/images/Razeen/Sadeem/Aryam-Sadeem-6.png";
+import home_image from "/images/Home/All.png";
 // End Razeen Images
 
 export {
+    home_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation_10_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
     aryam_al_mamourah_a_basketball_image,
