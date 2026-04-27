@@ -6,11 +6,13 @@ import aryam_al_mamourah_a_clinic_mamouraa_a_image from "/images/ARYAM-AL-MAMOUR
 import aryam_al_mamourah_a_dining_hall_mamouraa_a_image from "/images/ARYAM-AL-MAMOURAH-“A”/Dining hall Mamouraa A .png";
 import aryam_al_mamourah_a_football_image from "/images/ARYAM-AL-MAMOURAH-“A”/football.png";
 import aryam_al_mamourah_a_market_image from "/images/ARYAM-AL-MAMOURAH-“A”/market.png";
+import al_mamourah_a_image from "/images/ARYAM-AL-MAMOURAH-“A”/base_image.png";
 // End ARYAM-AL-MAMOURAH-“A” Images
 // Start ARYAM-AL-MAMOURAH-“B” Images
 import aryam_al_mamourah_b_aryam_al_mamourah_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/ARYAM-AL-MAMOURAH-“B”.png";
 import aryam_al_mamourah_b_basketball_image from "/images/ARYAM-AL-MAMOURAH-“B”/Basketball .png";
 import aryam_al_mamourah_b_mamouraa_b_shops_image from "/images/ARYAM-AL-MAMOURAH-“B”/Mamouraa-B-shops.png";
+import al_mamourah_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/base-image.png";
 // End ARYAM-AL-MAMOURAH-“B” Images
 // Start Icad Images
 import icad_al_dhabi_studio_apartment_5_beds_each_side_image from "/images/ICAD/Al Dhabi -  STUDIO APARTMENT 5 Beds Each Side .png";
@@ -55,6 +57,7 @@ import mougharaq_dining_hall_2 from "/images/Mougharaq/dining_hall_2.webp"
 import mougharaq_technicians_accommodation from "/images/Mougharaq/technicians_accommodation.webp"
 import mougharaq_running_track_1 from "/images/Mougharaq/running_track_1.webp"
 import mougharaq_running_track_2 from "/images/Mougharaq/running_track_2.webp"
+import mougharaq_image from "/images/Mougharaq/base-image.png"
 // End Mougharaq Images
 // Start Razeen Images
 import razeen_aryam_razeen_10_beds_image from "/images/Razeen/Aryam-Razeen-10-Beds.png";
@@ -72,10 +75,19 @@ import razeen_razeen_stadiums_image from "/images/Razeen/Razeen Stadiums.png";
 import razeen_sadeem_aryam_sadeem_10_image from "/images/Razeen/Sadeem/Aryam-Sadeem-10.png";
 import razeen_sadeem_aryam_sadeem_4_image from "/images/Razeen/Sadeem/Aryam-Sadeem-4.png";
 import razeen_sadeem_aryam_sadeem_6_image from "/images/Razeen/Sadeem/Aryam-Sadeem-6.png";
-import home_image from "/images/Home/All.png";
+import sadeem_image from "/images/Razeen/Sadeem/base-image.png"
+import razeen_image from "/images/Razeen/base-image.png"
 // End Razeen Images
+// Start Home Image
+import home_image from "/images/Home/All.png";
+// End Home Image
 
 export {
+    al_mamourah_a_image,
+    al_mamourah_b_image,
+    mougharaq_image,
+    sadeem_image,
+    razeen_image,
     home_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation_10_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,

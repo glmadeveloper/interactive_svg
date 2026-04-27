@@ -93,6 +93,7 @@ type SadeemKeys =
     | "commercialShops"
     | "clinic"
     | "administration"
+    | "type_A_10_buildings"
     | "kitchen_and_dining"
     | "playGround";
 

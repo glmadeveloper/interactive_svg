@@ -7,7 +7,9 @@ import {
     razeen_dining_hall_image,
     razeen_kitchen_image,
     razeen_mosq_image,
-    razeen_razeen_stadiums_image
+    razeen_razeen_stadiums_image,
+    razeen_aryam_razeen_10_beds_image,
+    razeen_sadeem_aryam_sadeem_10_image
 } from "../exports/images";
 import { communityVideo } from "../exports/videos";
 import type { SadeemCommunityObject } from "../types/communities";
@@ -208,6 +210,30 @@ export const SADEEM: SadeemCommunityObject = {
                 }
             ],
             images: [razeen_sadeem_aryam_sadeem_6_image]
-        }
+        },
+        type_A_10_buildings: {
+            title: "TYPE A – STAFF ACCOMMODATION",
+            description: "High-capacity residential buildings designed for large workforce accommodation. Type A units combine multiple room configurations with efficient layouts and access to shared services.",
+            category_name: "BUILDING OVERVIEW",
+            properties: [
+                {
+                    title: "Capacity",
+                    value: "17,880 Staff"
+                },
+                {
+                    title: "Buildings",
+                    value: "10 Buildings"
+                },
+                {
+                    title: "Room Types",
+                    value: "4x1 / 6x1 / 10x1"
+                },
+                {
+                    title: "Floors",
+                    value: "G+2 Residential Buildings"
+                }
+            ],
+            images: [razeen_aryam_razeen_10_beds_image, razeen_sadeem_aryam_sadeem_10_image]
+        },
     }
 }

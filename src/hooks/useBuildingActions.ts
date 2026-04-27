@@ -18,6 +18,9 @@ export function useBuildingActions({
     const TEXT_HOVER_COLOR = "#910811";
     const BACKGROUND_HOVER_COLOR = "#ffffff";
     const BORDER_HOVER_COLOR = "#910811";
+    const SQUARE_CLASSES = ".st67, .st6, .st11, .st7, .st13";
+    const TEXT_CLASSES = ".st17, .st5, .st9, .st11";
+    const ICON_CLASSES = ".st17, .st8, .st5, .st3, .st9, .st11";
 
     const showAlert = (key: string) => {
         const community = data[key as CommunityKey];
@@ -25,15 +28,21 @@ export function useBuildingActions({
         alert(`📍 ${name}\n\nClick confirmed. You are exploring this location.`);
     };
 
-    const refs = useRef<Record<string, RefGroup>>({});
+    const refs = useRef<Record<string, RefGroup[]>>({});
     const activeKey = useRef<string | null>(null);
-
     const setRef = (key: CommunityKey, type: keyof RefGroup) => (el: SVGElement | SVGAElement | null) => {
         if (!refs.current[key]) {
-            refs.current[key] = {};
+            refs.current[key] = [];
         }
 
-        (refs.current[key] as any)[type] = el;
+        let group = refs.current[key].find(g => !g[type]);
+
+        if (!group) {
+            group = {};
+            refs.current[key].push(group);
+        }
+
+        (group as any)[type] = el;
     };
 
     useEffect(() => {
@@ -41,9 +50,9 @@ export function useBuildingActions({
         const listeners = new Map<SVGElement, { click: any; enter: any; leave: any }>();
 
         const getParts = (group: RefGroup) => {
-            const squareMain = group.square?.querySelector<SVGElement>(".st67") || null;
+            const squareMain = group.square?.querySelector<SVGElement>(SQUARE_CLASSES) || null;
             const glowRects = group.square?.querySelectorAll<SVGElement>(".st53 rect") || [];
-            const connectors = group.square?.querySelectorAll<SVGElement>(".st7") || [];
+            const connectors = group.square?.querySelectorAll<SVGElement>(".st7, .st1") || [];
 
             const text: SVGElement[] = [];
             const icon: SVGElement[] = [];
@@ -54,9 +63,9 @@ export function useBuildingActions({
                 target.push(...root.querySelectorAll<SVGElement>(className));
             };
 
-            collectClass(group.text, ".st17", text);
-            collectClass(group.icon, ".st17", icon);
-            collectClass(group.icon, ".st8", icon);
+            collectClass(group.text, TEXT_CLASSES, text);
+            collectClass(group.icon, ICON_CLASSES, icon);
+
             return {
                 squareMain,
                 glowRects: Array.from(glowRects),
@@ -66,10 +75,7 @@ export function useBuildingActions({
             };
         };
 
-        const reset = (key: string) => {
-            const group = refs.current[key];
-            if (!group) return;
-
+        const reset = (group: RefGroup) => {
             const { squareMain, glowRects, text, icon, connectors } = getParts(group);
 
             if (squareMain) {
@@ -96,16 +102,12 @@ export function useBuildingActions({
             });
 
             if (group.square) {
-                // group.square.style.transform = "translateY(0) scale(1)";
                 group.square.style.filter = "none";
                 group.square.style.removeProperty("transition");
             }
         };
 
-        const activateHover = (key: string) => {
-            const group = refs.current[key];
-            if (!group) return;
-
+        const activateHover = (group: RefGroup) => {
             const { squareMain, glowRects, text, icon, connectors } = getParts(group);
 
             if (squareMain) {
@@ -135,16 +137,12 @@ export function useBuildingActions({
                 group.square.style.transition = "transform 0.28s ease, filter 0.28s ease";
                 group.square.style.transformBox = "fill-box";
                 group.square.style.transformOrigin = "center";
-                // group.square.style.transform = "translateY(-4px) scale(1.02)";
                 group.square.style.filter = "drop-shadow(0 10px 24px rgba(145, 8, 17, 0.22))";
                 group.square.style.cursor = "pointer";
             }
         };
 
-        const activateClick = (key: string) => {
-            const group = refs.current[key];
-            if (!group) return;
-
+        const activateClick = (group: RefGroup) => {
             const { squareMain, glowRects, text, icon, connectors } = getParts(group);
 
             if (squareMain) {
@@ -167,96 +165,94 @@ export function useBuildingActions({
             });
 
             if (group.square) {
-                // group.square.style.transform = "translateY(-2px) scale(1.03)";
                 group.square.style.filter = "drop-shadow(0 14px 30px rgba(145, 8, 17, 0.28))";
             }
         };
 
         keys.forEach((key) => {
-            const group = refs.current[key];
-            if (!group) return;
+            const groups = refs.current[key];
 
-            const isCommunity = key in data;
+            groups.forEach((group) => {
+                const isCommunity = key in data;
 
-            if (isCommunity && group.square) {
-                // ✅ COMMUNITY (square controls all)
-                const root = group.square;
+                if (isCommunity && group.square) {
+                    const root = group.square;
 
-                const onEnter = () => {
-                    if (activeKey.current === key) return;
-                    root.style.cursor = "pointer";
-                    activateHover(key);
-                };
-
-                const onLeave = () => {
-                    if (activeKey.current === key) return;
-                    reset(key);
-                };
-
-                const onClick = (e: Event) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    if (activeKey.current && activeKey.current !== key) {
-                        reset(activeKey.current);
-                    }
-
-                    activeKey.current = key;
-                    activateClick(key);
-
-                    onSelectBuilding(key as CommunityKey);
-                };
-
-                root.addEventListener("pointerenter", onEnter);
-                root.addEventListener("pointerleave", onLeave);
-                root.addEventListener("click", onClick);
-
-                listeners.set(root, { click: onClick, enter: onEnter, leave: onLeave });
-
-            } else {
-                // ✅ GLOBAL ICONS (separate targets)
-                const targets = [
-                    group.sdeiraLogo,
-                    group.homeIcon,
-                    group.communityLogo,
-                    group.backIcon,
-                    group.aboutCommunity
-                ].filter((el): el is SVGElement => el instanceof SVGElement);
-
-                targets.forEach((el) => {
                     const onEnter = () => {
-                        el.style.cursor = "pointer";
-                        el.style.opacity = "0.8";
+                        if (activeKey.current === key) return;
+                        activateHover(group);
                     };
 
                     const onLeave = () => {
-                        el.style.opacity = "1";
+                        if (activeKey.current === key) return;
+                        reset(group);
                     };
 
                     const onClick = (e: Event) => {
                         e.preventDefault();
                         e.stopPropagation();
 
-                        if (key === "aboutCommunity") {
-                            onSelectBuilding(key as CommunityKey);
-                        } else if (key === "homeIcon" || key === "sdeiraLogo") {
-                            window.open("https://sdeiragroup.ae/", "_blank");
-                        } else if (key === "communityLogo") {
-                            window.open(communityUrl, "_blank");
-                        } else if (key === "backIcon") {
-                            onBackToHome();
-                        } else {
-                            showAlert(key);
+                        if (activeKey.current && activeKey.current !== key) {
+                            refs.current[activeKey.current]?.forEach(reset);
                         }
+
+                        activeKey.current = key;
+
+                        refs.current[key].forEach(activateClick);
+
+                        onSelectBuilding(key as CommunityKey);
                     };
 
-                    el.addEventListener("mouseenter", onEnter);
-                    el.addEventListener("mouseleave", onLeave);
-                    el.addEventListener("click", onClick);
+                    root.addEventListener("pointerenter", onEnter);
+                    root.addEventListener("pointerleave", onLeave);
+                    root.addEventListener("click", onClick);
 
-                    listeners.set(el, { click: onClick, enter: onEnter, leave: onLeave });
-                });
-            }
+                    listeners.set(root, { click: onClick, enter: onEnter, leave: onLeave });
+
+                } else {
+                    const targets = [
+                        group.sdeiraLogo,
+                        group.homeIcon,
+                        group.communityLogo,
+                        group.backIcon,
+                        group.aboutCommunity
+                    ].filter((el): el is SVGElement => el instanceof SVGElement);
+
+                    targets.forEach((el) => {
+                        const onEnter = () => {
+                            el.style.cursor = "pointer";
+                            el.style.opacity = "0.8";
+                        };
+
+                        const onLeave = () => {
+                            el.style.opacity = "1";
+                        };
+
+                        const onClick = (e: Event) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            if (key === "aboutCommunity") {
+                                onSelectBuilding(key as CommunityKey);
+                            } else if (key === "homeIcon" || key === "sdeiraLogo") {
+                                window.open("https://sdeiragroup.ae/", "_blank");
+                            } else if (key === "communityLogo") {
+                                window.open(communityUrl, "_blank");
+                            } else if (key === "backIcon") {
+                                onBackToHome();
+                            } else {
+                                showAlert(key);
+                            }
+                        };
+
+                        el.addEventListener("mouseenter", onEnter);
+                        el.addEventListener("mouseleave", onLeave);
+                        el.addEventListener("click", onClick);
+
+                        listeners.set(el, { click: onClick, enter: onEnter, leave: onLeave });
+                    });
+                }
+            });
         });
 
         return () => {

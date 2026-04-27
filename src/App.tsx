@@ -7,7 +7,7 @@ import RenderPage from "./components/RenderPage";
 import { home_image } from "./exports/images";
 
 export default function App() {
-  const [selectedCommunity, setselectedCommunity] = useState<Community>("icad");
+  const [selectedCommunity, setselectedCommunity] = useState<Community>("home");
   const [showIntroVideo, setShowIntroVideo] = useState(true);
   const [showScreensaver, setShowScreensaver] = useState(false);
 
@@ -100,7 +100,8 @@ export default function App() {
           ) : (
             <RenderPage
               selectedCommunity={selectedCommunity}
-              setIsHomeVideoPlaying={() => setShowIntroVideo(true)}
+              setSelectedCommunity={setselectedCommunity}
+              setIsHomeVideoPlaying={(value) => setShowIntroVideo(value)}
             />
           )}
         </div>

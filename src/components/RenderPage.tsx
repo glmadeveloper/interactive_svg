@@ -2,7 +2,6 @@ import { useState } from 'react';
 import type { Community, CommunityKey } from '../types/communities'
 import AboutModal from './AboutModal';
 import BuildingModal from './BuildingModal';
-import { ICAD } from '../constants/Icad';
 import Icad from '../svgs/Icad';
 import { getSelectedBuildingData } from '../utils/getSelectedBuildingData';
 import MaamorahA from '../svgs/MaamorahA';
@@ -10,17 +9,26 @@ import MaamorahB from '../svgs/MaamorahB';
 import Mogharraq from '../svgs/Mogharraq';
 import Razeen from '../svgs/Razeen';
 import Sadeem from '../svgs/Sadeem';
+import { getSelectedCommunityData } from '../utils/getSelectedCommunityData';
 
 export default function RenderPage({
     selectedCommunity,
-    setIsHomeVideoPlaying
+    setIsHomeVideoPlaying,
+    setSelectedCommunity
 }: {
     selectedCommunity: Community;
-    setIsHomeVideoPlaying: React.Dispatch<React.SetStateAction<boolean>>
+    setIsHomeVideoPlaying: React.Dispatch<React.SetStateAction<boolean>>;
+    setSelectedCommunity: React.Dispatch<React.SetStateAction<Community>>;
 }) {
     const [selectedBuilding, setSelectedBuilding] = useState<CommunityKey | null>(null);
     const [showAboutModal, setShowAboutModal] = useState(false);
     const selectedBuildingData = getSelectedBuildingData(selectedCommunity, selectedBuilding);
+    const selectedCommunityData = getSelectedCommunityData(selectedCommunity);
+    console.log({
+        selectedCommunity,
+        selectedBuilding,
+        selectedBuildingData,
+    });
 
     const handleSelectBuilding = (key: string) => {
         if (key === "aboutCommunity") {
@@ -29,7 +37,7 @@ export default function RenderPage({
             return;
         }
 
-        if (key in ICAD.data) {
+        if (selectedCommunityData && key in selectedCommunityData.data) {
             setSelectedBuilding(key as CommunityKey);
             setShowAboutModal(false);
         }
@@ -37,7 +45,8 @@ export default function RenderPage({
 
     const handleBackToHome = () => {
         setSelectedBuilding(null);
-        setIsHomeVideoPlaying(true);
+        setSelectedCommunity("home");
+        setIsHomeVideoPlaying(false);
     };
 
     const renderSelectedCommunity = () => {
@@ -83,8 +92,8 @@ export default function RenderPage({
             />
             <AboutModal
                 open={showAboutModal}
-                title={ICAD.title}
-                video={ICAD.video}
+                title={selectedCommunityData?.title || ""}
+                video={selectedCommunityData?.video || ""}
                 onClose={() => setShowAboutModal(false)}
             />
         </div>

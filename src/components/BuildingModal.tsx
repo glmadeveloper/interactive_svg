@@ -31,23 +31,23 @@ const propertyIcons: Record<string, any> = {
 };
 
 export default function BuildingModal({
-    selectedBuildingData: selectedCommunityData,
+    selectedBuildingData,
     onClose
 }: CommunityModalProps) {
     const [openStage, setOpenStage] = useState<"idle" | "width" | "height">("idle");
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
-    const slides = selectedCommunityData
-        ? selectedCommunityData.images.map((img, index) => ({
+    const slides = selectedBuildingData
+        ? selectedBuildingData.images.map((img, index) => ({
             src: img,
             thumbnail: img,
-            alt: `${selectedCommunityData.title} ${index + 1}`
+            alt: `${selectedBuildingData.title} ${index + 1}`
         }))
         : [];
 
     useEffect(() => {
-        if (selectedCommunityData) {
+        if (selectedBuildingData) {
             setOpenStage("width");
             const timer = setTimeout(() => {
                 setOpenStage("height");
@@ -56,7 +56,7 @@ export default function BuildingModal({
         } else {
             setOpenStage("idle");
         }
-    }, [selectedCommunityData]);
+    }, [selectedBuildingData]);
 
     useEffect(() => {
         if (lightboxOpen) {
@@ -73,7 +73,7 @@ export default function BuildingModal({
         };
     }, [lightboxOpen]);
 
-    if (!selectedCommunityData) return null;
+    if (!selectedBuildingData) return null;
 
     // ✅ handle outside click
     const handleOverlayClick = () => {
@@ -83,7 +83,7 @@ export default function BuildingModal({
     };
 
     const renderImageGrid = () => {
-        const images = selectedCommunityData.images;
+        const images = selectedBuildingData.images;
         const count = images.length;
 
         const ImageItem = ({ src, index, className }: { src: string; index: number; className?: string }) => (
@@ -128,7 +128,7 @@ export default function BuildingModal({
             case 1:
                 return (
                     <div className="w-full">
-                        <ImageItem src={images[0]} index={0} className="w-full h-[381px]" />
+                        <ImageItem src={images[0]} index={0} className="w-full h-[492px]" />
                     </div>
                 );
             case 2:
@@ -225,13 +225,13 @@ export default function BuildingModal({
                 <div className="flex-1 overflow-y-auto p-10 custom-scrollbar-minimal">
                     <div className="mb-12">
                         <h1 className="font-['DIN_Next_LT_Arabic'] font-bold text-[54px] leading-[100%] tracking-[0%] uppercase text-(--primary-color)">
-                            {selectedCommunityData.title}
+                            {selectedBuildingData.title}
                         </h1>
                     </div>
 
                     <div className="mb-8">
                         <p className="font-din font-normal text-[23px] leading-[35px] tracking-[0%] text-[#666] max-w-[90%]">
-                            {selectedCommunityData.description}
+                            {selectedBuildingData.description}
                         </p>
                     </div>
 
@@ -242,14 +242,14 @@ export default function BuildingModal({
                     </div>
                     <hr className="mt-[49px] mb-[39px] border-0 border-t-2 border-[#58595B4D]" />
                     <div>
-                        {selectedCommunityData.category_name !== "" && (
+                        {selectedBuildingData.category_name !== "" && (
                             <h3 className="font-din font-bold text-[32px] leading-[100%] tracking-[0%] uppercase text-[#58595B] mb-8">
-                                {selectedCommunityData.category_name || "Properties"}
+                                {selectedBuildingData.category_name || "Properties"}
                             </h3>
                         )}
-                        {selectedCommunityData.properties.length > 0 && (
+                        {selectedBuildingData.properties.length > 0 && (
                             <div className="grid grid-cols-2 gap-3">
-                                {selectedCommunityData.properties.map((prop, idx) => {
+                                {selectedBuildingData.properties.map((prop, idx) => {
                                     const icon = propertyIcons[prop.title];
                                     return (
                                         <div

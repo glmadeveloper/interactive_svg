@@ -2,22 +2,15 @@ import {
     razeen_mugharaq_image,
     razeen_clinic_image,
     mougharaq_kitchen_1,
-    mougharaq_kitchen_2,
     mougharaq_mosque_1,
-    mougharaq_mosque_2,
     mougharaq_supermarket_1,
-    mougharaq_supermarket_2,
     mougharaq_staff_amenities_1,
-    mougharaq_staff_amenities_2,
     mougharaq_staff_accommodation,
     mougharaq_engineers_manager_accomodation,
     mougharaq_indoor_1,
-    mougharaq_indoor_2,
     mougharaq_dining_hall_1,
-    mougharaq_dining_hall_2,
     mougharaq_technicians_accommodation,
     mougharaq_running_track_1,
-    mougharaq_running_track_2
 } from "../exports/images";
 import { communityVideo } from "../exports/videos";
 import type { MugharraqCommunityObject } from "../types/communities";
@@ -51,7 +44,6 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
             ],
             images: [
                 mougharaq_kitchen_1,
-                mougharaq_kitchen_2,
             ]
         },
         clinic: {
@@ -102,7 +94,6 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
             ],
             images: [
                 mougharaq_dining_hall_1,
-                mougharaq_dining_hall_2,
             ]
         },
         engineersManagersAccommodation: {
@@ -153,7 +144,6 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
             ],
             images: [
                 mougharaq_indoor_1,
-                mougharaq_indoor_2,
             ]
         },
         mosque: {
@@ -178,7 +168,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                     value: "Central Location"
                 }
             ],
-            images: [mougharaq_mosque_1, mougharaq_mosque_2]
+            images: [mougharaq_mosque_1]
         },
         runningTrack: {
             title: "RUNNING TRACK",
@@ -204,7 +194,6 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
             ],
             images: [
                 mougharaq_running_track_1,
-                mougharaq_running_track_2,
             ]
         },
         staffAccommodation: {
@@ -255,7 +244,6 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
             ],
             images: [
                 mougharaq_staff_amenities_1,
-                mougharaq_staff_amenities_2,
             ]
         },
         supermarket: {
@@ -280,7 +268,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                     value: "Central Location"
                 }
             ],
-            images: [mougharaq_supermarket_1, mougharaq_supermarket_2]
+            images: [mougharaq_supermarket_1]
         },
         supervisorsAccommodation: {
             title: "Supervisors Accommodation",
