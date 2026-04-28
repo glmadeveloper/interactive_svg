@@ -10,7 +10,6 @@ import aryam_al_mamourah_b_aryam_al_mamourah_b_image from "/images/ARYAM-AL-MAMO
 import aryam_al_mamourah_b_base_image_image from "/images/ARYAM-AL-MAMOURAH-“B”/base-image.png";
 import aryam_al_mamourah_b_basketball_image from "/images/ARYAM-AL-MAMOURAH-“B”/Basketball .png";
 import aryam_al_mamourah_b_mamouraa_b_shops_image from "/images/ARYAM-AL-MAMOURAH-“B”/Mamouraa-B-shops.png";
-import bar_image from "/images/Bar.png";
 import home_all_image from "/images/Home/All.png";
 import icad_al_dhabi_studio_apartment_5_beds_each_side_image from "/images/ICAD/Al Dhabi -  STUDIO APARTMENT 5 Beds Each Side .png";
 import icad_al_dhabi_1_image from "/images/ICAD/Al Dhabi - 1.png";
@@ -84,7 +83,6 @@ export {
     aryam_al_mamourah_b_base_image_image,
     aryam_al_mamourah_b_basketball_image,
     aryam_al_mamourah_b_mamouraa_b_shops_image,
-    bar_image,
     home_all_image,
     icad_al_dhabi_studio_apartment_5_beds_each_side_image,
     icad_al_dhabi_1_image,
