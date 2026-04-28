@@ -5,7 +5,7 @@ import { useBuildingActions } from '../hooks/useBuildingActions';
 import { razeen_bar_image, sadeem_image } from '../exports/images';
 
 export default function Sadeem({
-    onSelectBuilding, onBackToHome
+    onSelectBuilding, onBackToHome, onClickToHomeIcon
 }: SVGPageProps) {
     const { setRef } = useBuildingActions({
         onSelectBuilding: (key: CommunityKey) => {
@@ -13,6 +13,9 @@ export default function Sadeem({
         },
         onBackToHome: () => {
             onBackToHome();
+        },
+        onClickToHomeIcon: () => {
+            onClickToHomeIcon()
         },
         data: SADEEM.data,
         communityUrl: SADEEM.communityLogoUrl

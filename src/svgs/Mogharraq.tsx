@@ -6,7 +6,7 @@ import { MUGHARRAQ } from "../constants/Mugharraq"
 import { useBuildingActions } from '../hooks/useBuildingActions';
 
 export default function Mogharraq({
-  onSelectBuilding, onBackToHome
+  onSelectBuilding, onBackToHome, onClickToHomeIcon
 }: SVGPageProps) {
   const { setRef } = useBuildingActions({
     onSelectBuilding: (key: CommunityKey) => {
@@ -14,6 +14,9 @@ export default function Mogharraq({
     },
     onBackToHome: () => {
       onBackToHome();
+    },
+    onClickToHomeIcon: () => {
+      onClickToHomeIcon()
     },
     data: MUGHARRAQ.data,
     communityUrl: MUGHARRAQ.communityLogoUrl

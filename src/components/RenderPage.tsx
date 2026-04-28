@@ -49,37 +49,49 @@ export default function RenderPage({
         setIsHomeVideoPlaying(false);
     };
 
+    const handleClickHomeIcon = () => {
+        setSelectedBuilding(null);
+        setSelectedCommunity("home");
+        setIsHomeVideoPlaying(true);
+    };
+
     const renderSelectedCommunity = () => {
         switch (selectedCommunity) {
             case "icad":
                 return <Icad
                     onSelectBuilding={handleSelectBuilding}
                     onBackToHome={handleBackToHome}
+                    onClickToHomeIcon={handleClickHomeIcon}
                 />
             case "maamourah_a":
                 return <MaamorahA
                     onSelectBuilding={handleSelectBuilding}
                     onBackToHome={handleBackToHome}
+                    onClickToHomeIcon={handleClickHomeIcon}
                 />
             case "maamourah_b":
                 return <MaamorahB
                     onSelectBuilding={handleSelectBuilding}
                     onBackToHome={handleBackToHome}
+                    onClickToHomeIcon={handleClickHomeIcon}
                 />
             case "mogharraq":
                 return <Mogharraq
                     onSelectBuilding={handleSelectBuilding}
                     onBackToHome={handleBackToHome}
+                    onClickToHomeIcon={handleClickHomeIcon}
                 />
             case "razeen":
                 return <Razeen
                     onSelectBuilding={handleSelectBuilding}
                     onBackToHome={handleBackToHome}
+                    onClickToHomeIcon={handleClickHomeIcon}
                 />
             case "sadeem":
                 return <Sadeem
                     onSelectBuilding={handleSelectBuilding}
                     onBackToHome={handleBackToHome}
+                    onClickToHomeIcon={handleClickHomeIcon}
                 />
         }
     }

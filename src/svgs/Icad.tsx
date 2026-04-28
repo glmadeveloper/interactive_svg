@@ -3,13 +3,16 @@ import { icad_icad_image, razeen_bar_image } from "../exports/images";
 import { useBuildingActions } from "../hooks/useBuildingActions"
 import type { CommunityKey } from "../types/communities";
 
-export default function Icad({ onSelectBuilding, onBackToHome }: SVGPageProps) {
+export default function Icad({ onSelectBuilding, onBackToHome, onClickToHomeIcon }: SVGPageProps) {
     const { setRef } = useBuildingActions({
         onSelectBuilding: (key: CommunityKey) => {
             onSelectBuilding(key);
         },
         onBackToHome: () => {
             onBackToHome();
+        },
+        onClickToHomeIcon: () => {
+            onClickToHomeIcon()
         },
         data: ICAD.data,
         communityUrl: ICAD.communityLogoUrl

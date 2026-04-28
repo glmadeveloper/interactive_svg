@@ -5,13 +5,16 @@ import { al_mamourah_a_image, razeen_bar_image } from "../exports/images";
 import { useBuildingActions } from '../hooks/useBuildingActions';
 
 
-export default function MaamorahA({ onSelectBuilding, onBackToHome }: SVGPageProps) {
+export default function MaamorahA({ onSelectBuilding, onBackToHome, onClickToHomeIcon }: SVGPageProps) {
     const { setRef } = useBuildingActions({
         onSelectBuilding: (key: CommunityKey) => {
             onSelectBuilding(key);
         },
         onBackToHome: () => {
             onBackToHome();
+        },
+        onClickToHomeIcon: () => {
+            onClickToHomeIcon()
         },
         data: MAAMOURAH_A.data,
         communityUrl: MAAMOURAH_A.communityLogoUrl

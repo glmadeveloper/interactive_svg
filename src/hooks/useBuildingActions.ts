@@ -5,12 +5,14 @@ export function useBuildingActions({
     onSelectBuilding,
     onBackToHome,
     data,
-    communityUrl
+    communityUrl,
+    onClickToHomeIcon
 }: {
     onSelectBuilding: (key: CommunityKey) => void;
     onBackToHome: () => void;
     data: Record<string, any>;
     communityUrl: string;
+    onClickToHomeIcon: () => void;
 }) {
     const TEXT_CLICK_COLOR = "#910811";
     const BACKGROUND_CLICK_COLOR = "#ffffff";
@@ -234,12 +236,14 @@ export function useBuildingActions({
 
                             if (key === "aboutCommunity") {
                                 onSelectBuilding(key as CommunityKey);
-                            } else if (key === "homeIcon" || key === "sdeiraLogo") {
+                            } else if (key === "sdeiraLogo") {
                                 window.open("https://sdeiragroup.ae/", "_blank");
                             } else if (key === "communityLogo") {
                                 window.open(communityUrl, "_blank");
                             } else if (key === "backIcon") {
                                 onBackToHome();
+                            } else if (key === "homeIcon") {
+                                onClickToHomeIcon();
                             } else {
                                 showAlert(key);
                             }
