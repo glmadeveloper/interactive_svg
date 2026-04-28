@@ -2,7 +2,7 @@ import type { CommunityKey } from '../types/communities';
 
 import { SADEEM } from "../constants/Sadeem"
 import { useBuildingActions } from '../hooks/useBuildingActions';
-import { razeen_bar_image, sadeem_image } from '../exports/images';
+import { razeen_bar_image, razeen_sadeem_base_image_image } from '../exports/images';
 
 export default function Sadeem({
     onSelectBuilding, onBackToHome, onClickToHomeIcon
@@ -317,7 +317,7 @@ export default function Sadeem({
             >
                 <g clipPath="url(#clippath)" id="Layer_1">
                     <path className="st5" d="M0 0H4096V2457H0z" />
-                    <image width={7050} height={4914} transform="scale(.5)" xlinkHref={sadeem_image} />
+                    <image width={7050} height={4914} transform="scale(.5)" xlinkHref={razeen_sadeem_base_image_image} />
                     <image width={571} height={2457} transform="translate(3525)" xlinkHref={razeen_bar_image} />
                     <g ref={setRef("type_B_2_buildings", "square")}>
                         <path className="st6" d="M651 821H1289V913H651z" />

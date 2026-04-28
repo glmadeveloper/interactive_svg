@@ -7,6 +7,7 @@ export type Property =
     | "Quantity"
     | "Function"
     | "Room Types"
+    | "Toilet"
     | "Access";
 
 export type Community = "icad" | "home" | "maamourah_a" | "maamourah_b" | "mogharraq" | "razeen" | "sadeem";

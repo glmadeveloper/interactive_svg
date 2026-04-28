@@ -1,17 +1,18 @@
 import {
     razeen_mugharaq_image,
     razeen_clinic_image,
-    mougharaq_kitchen_1,
-    mougharaq_mosque_1,
-    mougharaq_supermarket_1,
-    mougharaq_staff_amenities_1,
-    mougharaq_staff_accommodation,
-    mougharaq_engineers_manager_accomodation,
-    mougharaq_indoor_1,
-    mougharaq_dining_hall_1,
-    mougharaq_technicians_accommodation,
-    mougharaq_running_track_1,
+    mougharaq_kitchen_1_image,
+    mougharaq_mosque_1_image,
+    mougharaq_supermarket_1_image,
+    mougharaq_staff_ameneties_1_image,
+    mougharaq_staff_accommodation_image,
+    mougharaq_engineers_manager_accomodation_image,
+    mougharaq_indoor_1_image,
+    mougharaq_dining_hall_1_image,
+    mougharaq_technicians_accommodation_image,
+    mougharaq_running_track_1_image,
 } from "../exports/images";
+
 import { communityVideo } from "../exports/videos";
 import type { MugharraqCommunityObject } from "../types/communities";
 
@@ -20,327 +21,173 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
     video: communityVideo,
     communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
     data: {
-        centralKitchen: {
-            title: "CENTRAL KITCHEN",
-            description: "Large-scale kitchen facility designed for high-volume meal preparation to support the community's dining needs.",
+        techniciansAccommodation: {
+            title: "TECHNICIANS ACCOMMODATION",
+            description: "Accommodation unit designed for technical staff, providing organized space with private facilities and efficient layout for daily living.",
+            category_name: "UNIT OVERVIEW",
+            properties: [
+                { title: "Room Types", value: "30 Sqm" },
+                { title: "Toilet", value: "Ensuite" },
+                { title: "Floors", value: "G+5 Building" },
+                { title: "Capacity", value: "750 Person" }
+            ],
+            images: [mougharaq_technicians_accommodation_image]
+        },
+
+        supervisorsAccommodation: {
+            title: "SUPERVISORS ACCOMMODATION",
+            description: "Accommodation unit designed for supervisors, offering organized space with private facilities and controlled occupancy for improved living standards.",
+            category_name: "UNIT OVERVIEW",
+            properties: [
+                { title: "Room Types", value: "30 Sqm" },
+                { title: "Toilet", value: "Ensuite" },
+                { title: "Floors", value: "G+5 Building" },
+                { title: "Capacity", value: "650 Person" }
+            ],
+            images: [razeen_mugharaq_image]
+        },
+
+        engineersManagersAccommodation: {
+            title: "ENGINEERS / MANAGERS ACCOMMODATION",
+            description: "Premium accommodation unit designed for managerial staff, offering larger space, private facilities, and enhanced comfort for long-term stay.",
+            category_name: "UNIT OVERVIEW",
+            properties: [
+                { title: "Room Types", value: "36 Sqm" },
+                { title: "Toilet", value: "Ensuite" },
+                { title: "Floors", value: "G+5 Building" },
+                { title: "Capacity", value: "100 Person" }
+            ],
+            images: [mougharaq_engineers_manager_accomodation_image]
+        },
+
+        staffAccommodation: {
+            title: "STAFF ACCOMMODATION",
+            description: "High-density accommodation unit designed for workforce housing with efficient space usage and shared facilities. Optimized for maximum occupancy.",
+            category_name: "UNIT OVERVIEW",
+            properties: [
+                { title: "Room Types", value: "25.5 Sqm" },
+                { title: "Toilet", value: "Shared" },
+                { title: "Floors", value: "G+2 Building" },
+                { title: "Capacity", value: "3600 Person" }
+            ],
+            images: [mougharaq_staff_accommodation_image]
+        },
+
+        swimmingPool: {
+            title: "SWIMMING POOL",
+            description: "Outdoor recreational facility designed for leisure and relaxation. Provides a controlled environment supporting resident well-being and daily use.",
             category_name: "FACILITY OVERVIEW",
             properties: [
-                {
-                    title: "Type",
-                    value: "Food Service Facility"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Building"
-                },
-                {
-                    title: "Function",
-                    value: "Meal Preparation"
-                },
-                {
-                    title: "Access",
-                    value: "Central Location"
-                }
+                { title: "Type", value: "Recreational Facility" },
+                { title: "Quantity", value: "1 Area" },
+                { title: "Function", value: "Leisure and Recreation" },
+                { title: "Access", value: "Central Outdoor Area" }
             ],
-            images: [
-                mougharaq_kitchen_1,
-            ]
+            images: [razeen_mugharaq_image]
         },
+
+        mosque: {
+            title: "MOSQUE",
+            description: "Dedicated prayer facility designed to serve the community with accessible location and adequate space for daily worship.",
+            category_name: "FACILITY OVERVIEW",
+            properties: [
+                { title: "Type", value: "Religious Facility" },
+                { title: "Quantity", value: "1 Building" },
+                { title: "Function", value: "Prayer and Worship" },
+                { title: "Access", value: "Central Location" }
+            ],
+            images: [mougharaq_mosque_1_image]
+        },
+
+        indoorRecreationsArea: {
+            title: "INDOOR RECREATION AREA",
+            description: "Indoor leisure facility designed to provide recreational activities including games, fitness, and social interaction within a controlled environment.",
+            category_name: "FACILITY OVERVIEW",
+            properties: [
+                { title: "Type", value: "Recreational Facility" },
+                { title: "Quantity", value: "1 Area" },
+                { title: "Function", value: "Indoor Activities and Leisure" },
+                { title: "Access", value: "Central Indoor Space" }
+            ],
+            images: [mougharaq_indoor_1_image]
+        },
+
+        supermarket: {
+            title: "SUPERMARKET",
+            description: "Retail facility providing groceries and daily essentials to support resident needs within the community.",
+            category_name: "FACILITY OVERVIEW",
+            properties: [
+                { title: "Type", value: "Retail Facility" },
+                { title: "Quantity", value: "1 Building" },
+                { title: "Function", value: "Grocery and Daily Needs" },
+                { title: "Access", value: "Central Location" }
+            ],
+            images: [mougharaq_supermarket_1_image]
+        },
+
         clinic: {
             title: "CLINIC",
-            description: "On-site medical facility providing basic healthcare support for residents.",
+            description: "Healthcare facility providing medical services and primary care support for residents.",
             category_name: "FACILITY OVERVIEW",
             properties: [
-                {
-                    title: "Type",
-                    value: "Healthcare Facility"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Building"
-                },
-                {
-                    title: "Function",
-                    value: "Medical Consultation"
-                },
-                {
-                    title: "Access",
-                    value: "Central Location"
-                }
+                { title: "Type", value: "Healthcare Facility" },
+                { title: "Quantity", value: "1 Building" },
+                { title: "Function", value: "Medical Services" },
+                { title: "Access", value: "Central Location" }
             ],
             images: [razeen_clinic_image, razeen_mugharaq_image]
         },
+
+        staffAmenities: {
+            title: "STAFF AMENITIES",
+            description: "Outdoor facility designed to support staff well-being with sports courts, activity areas, and open spaces for daily use and recreation.",
+            category_name: "FACILITY OVERVIEW",
+            properties: [
+                { title: "Type", value: "Recreational Facility" },
+                { title: "Quantity", value: "Multiple Areas" },
+                { title: "Function", value: "Sports and Outdoor Activities" },
+                { title: "Access", value: "Central Outdoor Area" }
+            ],
+            images: [mougharaq_staff_ameneties_1_image]
+        },
+
+        centralKitchen: {
+            title: "CENTRAL KITCHEN",
+            description: "Large-scale food preparation facility designed to support daily meal production and distribution for the entire community. Operates with high-capacity equipment and controlled processes.",
+            category_name: "FACILITY OVERVIEW",
+            properties: [
+                { title: "Type", value: "Food Service Facility" },
+                { title: "Quantity", value: "1 Main Facility" },
+                { title: "Function", value: "Meal Preparation and Distribution" },
+                { title: "Access", value: "Controlled Access" }
+            ],
+            images: [mougharaq_kitchen_1_image]
+        },
+
         diningHall: {
             title: "DINING HALL",
-            description: "Spacious dining area providing a comfortable environment for residents to consume meals.",
+            description: "Dedicated facility for meal service and dining, designed to accommodate large numbers of residents in an organized and efficient environment.",
             category_name: "FACILITY OVERVIEW",
             properties: [
-                {
-                    title: "Type",
-                    value: "Food Service Facility"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Building"
-                },
-                {
-                    title: "Function",
-                    value: "Dining"
-                },
-                {
-                    title: "Access",
-                    value: "Central Location"
-                }
+                { title: "Type", value: "Food Service Facility" },
+                { title: "Quantity", value: "1 Main Hall" },
+                { title: "Function", value: "Dining and Meal Service" },
+                { title: "Access", value: "Central Location" }
             ],
-            images: [
-                mougharaq_dining_hall_1,
-            ]
+            images: [mougharaq_dining_hall_1_image]
         },
-        engineersManagersAccommodation: {
-            title: "Engineers & Managers Accommodation",
-            category_name: "BUILDING OVERVIEW",
-            description: "Premium residential units designed for engineers and management staff, offering enhanced privacy and comfort.",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Residential"
-                },
-                {
-                    title: "Quantity",
-                    value: "Multiple Blocks"
-                },
-                {
-                    title: "Function",
-                    value: "Staff Housing"
-                },
-                {
-                    title: "Access",
-                    value: "Controlled"
-                }
-            ],
-            images: [mougharaq_engineers_manager_accomodation]
-        },
-        indoorRecreationsArea: {
-            title: "INDOOR RECREATION",
-            description: "Facility for indoor sports and recreational activities, supporting resident well-being and social engagement.",
-            category_name: "FACILITY OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Recreational Facility"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Building"
-                },
-                {
-                    title: "Function",
-                    value: "Sports and Leisure"
-                },
-                {
-                    title: "Access",
-                    value: "Central Location"
-                }
-            ],
-            images: [
-                mougharaq_indoor_1,
-            ]
-        },
-        mosque: {
-            title: "MOSQUE",
-            description: "Dedicated prayer facility serving the community's spiritual needs.",
-            category_name: "FACILITY OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Religious Facility"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Building"
-                },
-                {
-                    title: "Function",
-                    value: "Prayer and Worship"
-                },
-                {
-                    title: "Access",
-                    value: "Central Location"
-                }
-            ],
-            images: [mougharaq_mosque_1]
-        },
+
         runningTrack: {
             title: "RUNNING TRACK",
-            description: "Outdoor infrastructure designed for jogging and walking, promoting a healthy lifestyle within the community.",
+            description: "Dedicated outdoor track designed for running, jogging, and fitness activities, supporting daily exercise and physical well-being.",
             category_name: "FACILITY OVERVIEW",
             properties: [
-                {
-                    title: "Type",
-                    value: "Recreational infrastructure"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Track"
-                },
-                {
-                    title: "Function",
-                    value: "Exercise and Fitness"
-                },
-                {
-                    title: "Access",
-                    value: "Common Areas"
-                }
+                { title: "Type", value: "Recreational Facility" },
+                { title: "Quantity", value: "1 Track" },
+                { title: "Function", value: "Running and Fitness" },
+                { title: "Access", value: "Outdoor Area" }
             ],
-            images: [
-                mougharaq_running_track_1,
-            ]
-        },
-        staffAccommodation: {
-            title: "STAFF ACCOMMODATION",
-            description: "High-density residential buildings offering efficient layouts and access to shared services.",
-            category_name: "BUILDING OVERVIEW",
-            properties: [
-                {
-                    title: "Capacity",
-                    value: "Standardized"
-                },
-                {
-                    title: "Buildings",
-                    value: "Multiple Blocks"
-                },
-                {
-                    title: "Unit Type",
-                    value: "Staff Housing"
-                },
-                {
-                    title: "Floors",
-                    value: "Multi-Floor"
-                }
-            ],
-            images: [mougharaq_staff_accommodation]
-        },
-        staffAmenities: {
-            title: "Staff Amenities",
-            description: "Various service and support facilities for the community residents.",
-            category_name: "FACILITY OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Support"
-                },
-                {
-                    title: "Quantity",
-                    value: "Various"
-                },
-                {
-                    title: "Function",
-                    value: "Daily Services"
-                },
-                {
-                    title: "Access",
-                    value: "Distributed"
-                }
-            ],
-            images: [
-                mougharaq_staff_amenities_1,
-            ]
-        },
-        supermarket: {
-            title: "SUPERMARKET",
-            description: "Retail facility providing daily essentials and groceries for residents.",
-            category_name: "FACILITY OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Retail"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Building"
-                },
-                {
-                    title: "Function",
-                    value: "Shopping"
-                },
-                {
-                    title: "Access",
-                    value: "Central Location"
-                }
-            ],
-            images: [mougharaq_supermarket_1]
-        },
-        supervisorsAccommodation: {
-            title: "Supervisors Accommodation",
-            description: "Residential units tailored for supervisors, providing a higher standard of accommodation and privacy.",
-            category_name: "BUILDING OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Residential"
-                },
-                {
-                    title: "Quantity",
-                    value: "Multiple Blocks"
-                },
-                {
-                    title: "Function",
-                    value: "Supervisor Housing"
-                },
-                {
-                    title: "Access",
-                    value: "Controlled"
-                }
-            ],
-            images: [razeen_mugharaq_image]
-        },
-        swimmingPool: {
-            title: "SWIMMING POOL",
-            description: "Facility for swimming and leisure activities, providing a high-end recreational experience.",
-            category_name: "FACILITY OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Recreational Facility"
-                },
-                {
-                    title: "Quantity",
-                    value: "1 Pool"
-                },
-                {
-                    title: "Function",
-                    value: "Leisure and Exercise"
-                },
-                {
-                    title: "Access",
-                    value: "Common Outdoor Area"
-                }
-            ],
-            images: [razeen_mugharaq_image]
-        },
-        techniciansAccommodation: {
-            title: "Technicians Accommodation",
-            description: "Residential units designed specifically for technical staff, combining functionality with optimized living space.",
-            category_name: "BUILDING OVERVIEW",
-            properties: [
-                {
-                    title: "Type",
-                    value: "Residential"
-                },
-                {
-                    title: "Quantity",
-                    value: "Multiple Blocks"
-                },
-                {
-                    title: "Function",
-                    value: "Technician Housing"
-                },
-                {
-                    title: "Access",
-                    value: "Controlled"
-                }
-            ],
-            images: [mougharaq_technicians_accommodation]
+            images: [mougharaq_running_track_1_image]
         }
     }
-}
+};

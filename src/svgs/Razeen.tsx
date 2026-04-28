@@ -1,6 +1,6 @@
 import type { CommunityKey } from '../types/communities';
 
-import { razeen_bar_image, razeen_image } from "../exports/images";
+import { razeen_bar_image, razeen_base_image_image } from "../exports/images";
 
 import { RAZEEN } from "../constants/Razeen"
 import { useBuildingActions } from '../hooks/useBuildingActions';
@@ -319,7 +319,7 @@ export default function Razeen({
         <g clipPath="url(#clippath)" id="Layer_1">
           <path className="st5" d="M0 0H4096V2457H0z" />
           <image width={571} height={2457} transform="translate(3525)" xlinkHref={razeen_bar_image} />
-          <image width={3525} height={2457} xlinkHref={razeen_image} />
+          <image width={3525} height={2457} xlinkHref={razeen_base_image_image} />
           <g ref={setRef("type_B_2_buildings", "square")}>
             <path className="st6" d="M651 821H1289V913H651z" />
             <path ref={setRef("type_B_2_buildings", "text")}

@@ -1,7 +1,7 @@
 import type { CommunityKey } from '../types/communities';
 import { MAAMOURAH_A } from "../constants/MaamorahA"
 
-import { al_mamourah_a_image, razeen_bar_image } from "../exports/images";
+import { aryam_al_mamourah_a_base_image_image, razeen_bar_image } from "../exports/images";
 import { useBuildingActions } from '../hooks/useBuildingActions';
 
 
@@ -374,7 +374,7 @@ export default function MaamorahA({ onSelectBuilding, onBackToHome, onClickToHom
                 }}
             >
                 <g id="Layer_1">
-                    <image width={7050} height={4914} transform="scale(.5)" xlinkHref={al_mamourah_a_image} />
+                    <image width={7050} height={4914} transform="scale(.5)" xlinkHref={aryam_al_mamourah_a_base_image_image} />
                     <image
                         width={1142}
                         height={4914}

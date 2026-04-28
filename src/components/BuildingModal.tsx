@@ -205,7 +205,7 @@ export default function BuildingModal({
             <div
                 onClick={(e) => e.stopPropagation()} // ✅ prevent inside clicks from closing
                 className={`
-                relative ml-[63px] w-[974px] h-[1083px] flex flex-col rounded-[2.5rem] 
+                relative ml-[63px] w-[min(90vw,974px)] min-h-[600px] max-h-[98vh] flex flex-col rounded-[2.5rem] 
                 bg-(--modal-primary-color) shadow-[0_20px_80px_rgba(0,0,0,0.2)] text-[#555]
                 origin-left transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
                 overflow-hidden
@@ -222,7 +222,7 @@ export default function BuildingModal({
                     <X size={24} className="text-[#333]/60" />
                 </button>
 
-                <div className="flex-1 overflow-y-auto p-10 custom-scrollbar-minimal">
+                <div className="flex-1 overflow-y-auto 2xl:overflow-visible p-10 custom-scrollbar-minimal">
                     <div className="mb-12">
                         <h1 className="font-['DIN_Next_LT_Arabic'] font-bold text-[54px] leading-[100%] tracking-[0%] uppercase text-(--primary-color)">
                             {selectedBuildingData.title}

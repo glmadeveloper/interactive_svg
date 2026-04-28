@@ -1,20 +1,17 @@
-// Start ARYAM-AL-MAMOURAH-“A” Images
 import aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation_10_image from "/images/ARYAM-AL-MAMOURAH-“A”/ARYAM-AL-MAMOURAH-“A”-STAFF-ACCOMMODATION-10.png";
 import aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image from "/images/ARYAM-AL-MAMOURAH-“A”/ARYAM-AL-MAMOURAH-“A”-STAFF-ACCOMMODATION4.png";
+import aryam_al_mamourah_a_base_image_image from "/images/ARYAM-AL-MAMOURAH-“A”/base_image.png";
 import aryam_al_mamourah_a_basketball_image from "/images/ARYAM-AL-MAMOURAH-“A”/Basketball .png";
 import aryam_al_mamourah_a_clinic_mamouraa_a_image from "/images/ARYAM-AL-MAMOURAH-“A”/CLINIC. Mamouraa A.png";
 import aryam_al_mamourah_a_dining_hall_mamouraa_a_image from "/images/ARYAM-AL-MAMOURAH-“A”/Dining hall Mamouraa A .png";
 import aryam_al_mamourah_a_football_image from "/images/ARYAM-AL-MAMOURAH-“A”/football.png";
 import aryam_al_mamourah_a_market_image from "/images/ARYAM-AL-MAMOURAH-“A”/market.png";
-import al_mamourah_a_image from "/images/ARYAM-AL-MAMOURAH-“A”/base_image.png";
-// End ARYAM-AL-MAMOURAH-“A” Images
-// Start ARYAM-AL-MAMOURAH-“B” Images
 import aryam_al_mamourah_b_aryam_al_mamourah_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/ARYAM-AL-MAMOURAH-“B”.png";
+import aryam_al_mamourah_b_base_image_image from "/images/ARYAM-AL-MAMOURAH-“B”/base-image.png";
 import aryam_al_mamourah_b_basketball_image from "/images/ARYAM-AL-MAMOURAH-“B”/Basketball .png";
 import aryam_al_mamourah_b_mamouraa_b_shops_image from "/images/ARYAM-AL-MAMOURAH-“B”/Mamouraa-B-shops.png";
-import al_mamourah_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/base-image.png";
-// End ARYAM-AL-MAMOURAH-“B” Images
-// Start Icad Images
+import bar_image from "/images/Bar.png";
+import home_all_image from "/images/Home/All.png";
 import icad_al_dhabi_studio_apartment_5_beds_each_side_image from "/images/ICAD/Al Dhabi -  STUDIO APARTMENT 5 Beds Each Side .png";
 import icad_al_dhabi_1_image from "/images/ICAD/Al Dhabi - 1.png";
 import icad_al_dhabi_2_image from "/images/ICAD/Al Dhabi - 2.png";
@@ -34,36 +31,34 @@ import icad_icad_mosuqe_image from "/images/ICAD/ICAD MOSUQE.png";
 import icad_icad_image from "/images/ICAD/ICAD.png";
 import icad_sports_hall_image from "/images/ICAD/sports hall.png";
 import icad_square_mall_image from "/images/ICAD/Square Mall.png";
-// End ICAD Images
-// Start Mougharaq Images
+import icad_image from "/images/ICAD.jpg";
 import mougharaq_1_beds_image from "/images/Mougharaq/1-Beds.jpg";
 import mougharaq_2_beds_image from "/images/Mougharaq/2-Beds.jpg";
 import mougharaq_3_beds_image from "/images/Mougharaq/3-Beds.jpg";
 import mougharaq_6_beds_image from "/images/Mougharaq/6-Beds.jpg";
-import mougharaq_kitchen_1 from "/images/Mougharaq/kitchen_1.webp";
-import mougharaq_kitchen_2 from "/images/Mougharaq/kitchen_2.webp";
-import mougharaq_mosque_1 from "/images/Mougharaq/mosque_1.webp";
-import mougharaq_mosque_2 from "/images/Mougharaq/mosque_2.webp";
-import mougharaq_supermarket_1 from "/images/Mougharaq/supermarket_1.webp";
-import mougharaq_supermarket_2 from "/images/Mougharaq/supermarket_2.webp";
-import mougharaq_staff_amenities_1 from "/images/Mougharaq/staff_ameneties_1.webp";
-import mougharaq_staff_amenities_2 from "/images/Mougharaq/staff_ameneties_2.webp";
-import mougharaq_staff_accommodation from "/images/Mougharaq/staff_accommodation.webp";
-import mougharaq_engineers_manager_accomodation from "/images/Mougharaq/engineers_manager_accomodation.webp"
-import mougharaq_indoor_1 from "/images/Mougharaq/indoor_1.webp"
-import mougharaq_indoor_2 from "/images/Mougharaq/indoor_2.webp"
-import mougharaq_dining_hall_1 from "/images/Mougharaq/dining_hall_1.webp"
-import mougharaq_dining_hall_2 from "/images/Mougharaq/dining_hall_2.webp"
-import mougharaq_technicians_accommodation from "/images/Mougharaq/technicians_accommodation.webp"
-import mougharaq_running_track_1 from "/images/Mougharaq/running_track_1.webp"
-import mougharaq_running_track_2 from "/images/Mougharaq/running_track_2.webp"
-import mougharaq_image from "/images/Mougharaq/base-image.png"
-// End Mougharaq Images
-// Start Razeen Images
+import mougharaq_base_image_image from "/images/Mougharaq/base-image.png";
+import mougharaq_dining_hall_1_image from "/images/Mougharaq/dining_hall_1.webp";
+import mougharaq_dining_hall_2_image from "/images/Mougharaq/dining_hall_2.webp";
+import mougharaq_engineers_manager_accomodation_image from "/images/Mougharaq/engineers_manager_accomodation.webp";
+import mougharaq_indoor_1_image from "/images/Mougharaq/indoor_1.webp";
+import mougharaq_indoor_2_image from "/images/Mougharaq/indoor_2.webp";
+import mougharaq_kitchen_1_image from "/images/Mougharaq/kitchen_1.webp";
+import mougharaq_kitchen_2_image from "/images/Mougharaq/kitchen_2.webp";
+import mougharaq_mosque_1_image from "/images/Mougharaq/mosque_1.webp";
+import mougharaq_mosque_2_image from "/images/Mougharaq/mosque_2.webp";
+import mougharaq_running_track_1_image from "/images/Mougharaq/running_track_1.webp";
+import mougharaq_running_track_2_image from "/images/Mougharaq/running_track_2.webp";
+import mougharaq_staff_accommodation_image from "/images/Mougharaq/staff_accommodation.webp";
+import mougharaq_staff_ameneties_1_image from "/images/Mougharaq/staff_ameneties_1.webp";
+import mougharaq_staff_ameneties_2_image from "/images/Mougharaq/staff_ameneties_2.webp";
+import mougharaq_supermarket_1_image from "/images/Mougharaq/supermarket_1.webp";
+import mougharaq_supermarket_2_image from "/images/Mougharaq/supermarket_2.webp";
+import mougharaq_technicians_accommodation_image from "/images/Mougharaq/technicians_accommodation.webp";
 import razeen_aryam_razeen_10_beds_image from "/images/Razeen/Aryam-Razeen-10-Beds.png";
 import razeen_aryam_razeen_4_beds_image from "/images/Razeen/Aryam-Razeen-4-Beds.png";
 import razeen_aryam_razeen_6_beds_image from "/images/Razeen/Aryam-Razeen-6-Beds.png";
 import razeen_bar_image from "/images/Razeen/Bar.png";
+import razeen_base_image_image from "/images/Razeen/base-image.png";
 import razeen_building_the_admin_image from "/images/Razeen/Building-the-admin.png";
 import razeen_clinic_image from "/images/Razeen/CLINIC.png";
 import razeen_dining_hall_image from "/images/Razeen/Dining hall.png";
@@ -75,30 +70,23 @@ import razeen_razeen_stadiums_image from "/images/Razeen/Razeen Stadiums.png";
 import razeen_sadeem_aryam_sadeem_10_image from "/images/Razeen/Sadeem/Aryam-Sadeem-10.png";
 import razeen_sadeem_aryam_sadeem_4_image from "/images/Razeen/Sadeem/Aryam-Sadeem-4.png";
 import razeen_sadeem_aryam_sadeem_6_image from "/images/Razeen/Sadeem/Aryam-Sadeem-6.png";
-import sadeem_image from "/images/Razeen/Sadeem/base-image.png"
-import razeen_image from "/images/Razeen/base-image.png"
-// End Razeen Images
-// Start Home Image
-import home_image from "/images/Home/All.png";
-// End Home Image
+import razeen_sadeem_base_image_image from "/images/Razeen/Sadeem/base-image.png";
 
 export {
-    al_mamourah_a_image,
-    al_mamourah_b_image,
-    mougharaq_image,
-    sadeem_image,
-    razeen_image,
-    home_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation_10_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
+    aryam_al_mamourah_a_base_image_image,
     aryam_al_mamourah_a_basketball_image,
     aryam_al_mamourah_a_clinic_mamouraa_a_image,
     aryam_al_mamourah_a_dining_hall_mamouraa_a_image,
     aryam_al_mamourah_a_football_image,
     aryam_al_mamourah_a_market_image,
     aryam_al_mamourah_b_aryam_al_mamourah_b_image,
+    aryam_al_mamourah_b_base_image_image,
     aryam_al_mamourah_b_basketball_image,
     aryam_al_mamourah_b_mamouraa_b_shops_image,
+    bar_image,
+    home_all_image,
     icad_al_dhabi_studio_apartment_5_beds_each_side_image,
     icad_al_dhabi_1_image,
     icad_al_dhabi_2_image,
@@ -118,31 +106,34 @@ export {
     icad_icad_image,
     icad_sports_hall_image,
     icad_square_mall_image,
+    icad_image,
     mougharaq_1_beds_image,
     mougharaq_2_beds_image,
     mougharaq_3_beds_image,
     mougharaq_6_beds_image,
-    mougharaq_kitchen_1,
-    mougharaq_kitchen_2,
-    mougharaq_mosque_1,
-    mougharaq_mosque_2,
-    mougharaq_supermarket_1,
-    mougharaq_supermarket_2,
-    mougharaq_staff_amenities_1,
-    mougharaq_staff_amenities_2,
-    mougharaq_staff_accommodation,
-    mougharaq_engineers_manager_accomodation,
-    mougharaq_indoor_1,
-    mougharaq_indoor_2,
-    mougharaq_dining_hall_1,
-    mougharaq_dining_hall_2,
-    mougharaq_running_track_1,
-    mougharaq_running_track_2,
-    mougharaq_technicians_accommodation,
+    mougharaq_base_image_image,
+    mougharaq_dining_hall_1_image,
+    mougharaq_dining_hall_2_image,
+    mougharaq_engineers_manager_accomodation_image,
+    mougharaq_indoor_1_image,
+    mougharaq_indoor_2_image,
+    mougharaq_kitchen_1_image,
+    mougharaq_kitchen_2_image,
+    mougharaq_mosque_1_image,
+    mougharaq_mosque_2_image,
+    mougharaq_running_track_1_image,
+    mougharaq_running_track_2_image,
+    mougharaq_staff_accommodation_image,
+    mougharaq_staff_ameneties_1_image,
+    mougharaq_staff_ameneties_2_image,
+    mougharaq_supermarket_1_image,
+    mougharaq_supermarket_2_image,
+    mougharaq_technicians_accommodation_image,
     razeen_aryam_razeen_10_beds_image,
     razeen_aryam_razeen_4_beds_image,
     razeen_aryam_razeen_6_beds_image,
     razeen_bar_image,
+    razeen_base_image_image,
     razeen_building_the_admin_image,
     razeen_clinic_image,
     razeen_dining_hall_image,
@@ -154,5 +145,6 @@ export {
     razeen_sadeem_aryam_sadeem_10_image,
     razeen_sadeem_aryam_sadeem_4_image,
     razeen_sadeem_aryam_sadeem_6_image,
+    razeen_sadeem_base_image_image,
 };
 

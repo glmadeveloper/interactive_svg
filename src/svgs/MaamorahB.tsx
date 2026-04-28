@@ -2,7 +2,7 @@ import type { CommunityKey } from '../types/communities';
 
 import { MAAMORAH_B } from "../constants/MaamorahB"
 import { useBuildingActions } from '../hooks/useBuildingActions';
-import { al_mamourah_b_image, razeen_bar_image } from '../exports/images';
+import { aryam_al_mamourah_b_base_image_image, razeen_bar_image } from '../exports/images';
 
 export default function MaamorahB({
   onSelectBuilding, onBackToHome,onClickToHomeIcon
@@ -225,7 +225,7 @@ export default function MaamorahB({
         <g clipPath="url(#clippath)" id="Layer_1">
           <path className="st5" d="M0 0H4096V2457H0z" />
           <image width={7050} height={4914} transform="scale(.5)"
-            xlinkHref={al_mamourah_b_image}
+            xlinkHref={aryam_al_mamourah_b_base_image_image}
           />
           <image
             width={1142}

@@ -1,6 +1,6 @@
 import type { CommunityKey } from '../types/communities';
 
-import { mougharaq_image, razeen_bar_image } from "../exports/images";
+import { mougharaq_base_image_image, razeen_bar_image } from "../exports/images";
 
 import { MUGHARRAQ } from "../constants/Mugharraq"
 import { useBuildingActions } from '../hooks/useBuildingActions';
@@ -523,7 +523,7 @@ export default function Mogharraq({
         }}
       >
         <g id="Layer_1">
-          <image width={7050} height={4914} transform="scale(.5)" xlinkHref={mougharaq_image} />
+          <image width={7050} height={4914} transform="scale(.5)" xlinkHref={mougharaq_base_image_image} />
           <image
             width={1142}
             height={4914}

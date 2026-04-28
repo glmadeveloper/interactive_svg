@@ -1,4 +1,4 @@
-import { home_image } from "../exports/images";
+import { home_all_image } from "../exports/images";
 import { useCommunityActions } from "../hooks/useCommunityActions";
 import type { Community } from "../types/communities"
 
@@ -21,7 +21,7 @@ export default function Home({
       <defs>
         <style>{".st0{fill:#fff;opacity:0}"}</style>
       </defs>
-      <image width={8192} height={4914} transform="scale(.5)" xlinkHref={home_image} />
+      <image width={8192} height={4914} transform="scale(.5)" xlinkHref={home_all_image} />
       <path
         ref={setRef("sadeem", "square")}
         className="st0"

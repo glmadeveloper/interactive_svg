@@ -17,7 +17,7 @@ export default function AboutModal({ open, title, video, onClose }: AboutModalPr
         >
             <div
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-[900px] rounded-[2rem] bg-(--modal-primary-color) p-8"
+                className="relative w-[900px] min-h-[600px] max-h-[98vh] rounded-[2rem] bg-(--modal-primary-color) p-8"
             >
                 <button
                     onClick={onClose}

@@ -4,11 +4,11 @@ import type { Community } from "./types/communities";
 import Preloader from "./components/Preloader";
 import Home from "./svgs/Home";
 import RenderPage from "./components/RenderPage";
-import { home_image } from "./exports/images";
+import { home_all_image } from "./exports/images";
 
 export default function App() {
   const [selectedCommunity, setselectedCommunity] = useState<Community>("home");
-  const [showIntroVideo, setShowIntroVideo] = useState(true);
+  const [showIntroVideo, setShowIntroVideo] = useState(false);
   const [showScreensaver, setShowScreensaver] = useState(false);
 
   const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -70,7 +70,7 @@ export default function App() {
             src={homeVideo}
             preload="metadata"
             autoPlay
-            poster={home_image}
+            poster={home_all_image}
             muted
             playsInline
             onEnded={handleIntroVideoEnded}
@@ -86,7 +86,7 @@ export default function App() {
             preload="metadata"
             loop
             autoPlay
-            poster={home_image}
+            poster={home_all_image}
             muted
             playsInline
           />
