@@ -31,7 +31,6 @@ import icad_icad_mosuqe_image from "/images/ICAD/ICAD MOSUQE.png";
 import icad_icad_image from "/images/ICAD/ICAD.png";
 import icad_sports_hall_image from "/images/ICAD/sports hall.png";
 import icad_square_mall_image from "/images/ICAD/Square Mall.png";
-import icad_image from "/images/ICAD.jpg";
 import mougharaq_1_beds_image from "/images/Mougharaq/1-Beds.jpg";
 import mougharaq_2_beds_image from "/images/Mougharaq/2-Beds.jpg";
 import mougharaq_3_beds_image from "/images/Mougharaq/3-Beds.jpg";
@@ -106,7 +105,6 @@ export {
     icad_icad_image,
     icad_sports_hall_image,
     icad_square_mall_image,
-    icad_image,
     mougharaq_1_beds_image,
     mougharaq_2_beds_image,
     mougharaq_3_beds_image,
