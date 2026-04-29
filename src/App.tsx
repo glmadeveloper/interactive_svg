@@ -8,7 +8,7 @@ import { home_all_image } from "./exports/images";
 
 export default function App() {
   const [selectedCommunity, setselectedCommunity] = useState<Community>("home");
-  const [showIntroVideo, setShowIntroVideo] = useState(false);
+  const [showIntroVideo, setShowIntroVideo] = useState(true);
   const [showScreensaver, setShowScreensaver] = useState(false);
 
   const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
