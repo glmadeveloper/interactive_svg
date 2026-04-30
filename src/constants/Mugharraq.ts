@@ -1,25 +1,30 @@
 import {
-    razeen_mugharaq_image,
-    razeen_clinic_image,
-    mougharaq_kitchen_1_image,
-    mougharaq_mosque_1_image,
-    mougharaq_supermarket_1_image,
-    mougharaq_staff_ameneties_1_image,
-    mougharaq_staff_accommodation_image,
-    mougharaq_engineers_manager_accomodation_image,
-    mougharaq_indoor_1_image,
-    mougharaq_dining_hall_1_image,
+    mougharaq_clinic_image,
+    mougharaq_central_kitchen_1_image,
+    mougharaq_central_kitchen_2_image,
+    mougharaq_mosque_image,
+    mougharaq_supermarket_image,
+    mougharaq_staff_amenities_1_image,
+    mougharaq_staff_amenities_2_image,
+    mougharaq_staff_accommodation_1_2_image,
+    mougharaq_engineers_managers_accommodation_image,
+    mougharaq_indoor_recrations_area_1_image,
+    mougharaq_indoor_recrations_area_2_image,
+    mougharaq_dinning_hall_1_image,
+    mougharaq_dinning_hall_2_image,
     mougharaq_technicians_accommodation_image,
-    mougharaq_running_track_1_image,
+    mougharaq_running_track_image,
+    mougharaq_swimming_pool_image,
+    mougharaq_supervisor_accommodation_image
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { mugharraq_video } from "../exports/videos";
 import type { MugharraqCommunityObject } from "../types/communities";
 
 export const MUGHARRAQ: MugharraqCommunityObject = {
     title: "Mugharraq Community",
-    video: communityVideo,
-    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
+    video: mugharraq_video,
+    communityLogoUrl: "https://sdeiragroup.ae/en",
     data: {
         techniciansAccommodation: {
             title: "TECHNICIANS ACCOMMODATION",
@@ -44,7 +49,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Floors", value: "G+5 Building" },
                 { title: "Capacity", value: "650 Person" }
             ],
-            images: [razeen_mugharaq_image]
+            images: [mougharaq_supervisor_accommodation_image]
         },
 
         engineersManagersAccommodation: {
@@ -57,7 +62,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Floors", value: "G+5 Building" },
                 { title: "Capacity", value: "100 Person" }
             ],
-            images: [mougharaq_engineers_manager_accomodation_image]
+            images: [mougharaq_engineers_managers_accommodation_image]
         },
 
         staffAccommodation: {
@@ -70,7 +75,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Floors", value: "G+2 Building" },
                 { title: "Capacity", value: "3600 Person" }
             ],
-            images: [mougharaq_staff_accommodation_image]
+            images: [mougharaq_staff_accommodation_1_2_image]
         },
 
         swimmingPool: {
@@ -83,7 +88,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Leisure and Recreation" },
                 { title: "Access", value: "Central Outdoor Area" }
             ],
-            images: [razeen_mugharaq_image]
+            images: [mougharaq_swimming_pool_image]
         },
 
         mosque: {
@@ -96,7 +101,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Prayer and Worship" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [mougharaq_mosque_1_image]
+            images: [mougharaq_mosque_image]
         },
 
         indoorRecreationsArea: {
@@ -109,7 +114,10 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Indoor Activities and Leisure" },
                 { title: "Access", value: "Central Indoor Space" }
             ],
-            images: [mougharaq_indoor_1_image]
+            images: [
+                mougharaq_indoor_recrations_area_1_image,
+                mougharaq_indoor_recrations_area_2_image
+            ]
         },
 
         supermarket: {
@@ -122,7 +130,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Grocery and Daily Needs" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [mougharaq_supermarket_1_image]
+            images: [mougharaq_supermarket_image]
         },
 
         clinic: {
@@ -135,7 +143,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Medical Services" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [razeen_clinic_image, razeen_mugharaq_image]
+            images: [mougharaq_clinic_image]
         },
 
         staffAmenities: {
@@ -148,7 +156,10 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Sports and Outdoor Activities" },
                 { title: "Access", value: "Central Outdoor Area" }
             ],
-            images: [mougharaq_staff_ameneties_1_image]
+            images: [
+                mougharaq_staff_amenities_1_image,
+                mougharaq_staff_amenities_2_image
+            ]
         },
 
         centralKitchen: {
@@ -161,7 +172,10 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Meal Preparation and Distribution" },
                 { title: "Access", value: "Controlled Access" }
             ],
-            images: [mougharaq_kitchen_1_image]
+            images: [
+                mougharaq_central_kitchen_1_image,
+                mougharaq_central_kitchen_2_image
+            ]
         },
 
         diningHall: {
@@ -174,7 +188,10 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Dining and Meal Service" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [mougharaq_dining_hall_1_image]
+            images: [
+                mougharaq_dinning_hall_1_image,
+                mougharaq_dinning_hall_2_image
+            ]
         },
 
         runningTrack: {
@@ -187,7 +204,7 @@ export const MUGHARRAQ: MugharraqCommunityObject = {
                 { title: "Function", value: "Running and Fitness" },
                 { title: "Access", value: "Outdoor Area" }
             ],
-            images: [mougharaq_running_track_1_image]
+            images: [mougharaq_running_track_image]
         }
     }
 };

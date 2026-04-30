@@ -25,7 +25,7 @@ import type { IcadCommunityObject } from "../types/communities";
 export const ICAD: IcadCommunityObject = {
     title: "Icad Community",
     video: communityVideo,
-    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
+    communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {
         alReem: {

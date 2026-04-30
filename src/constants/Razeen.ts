@@ -1,26 +1,24 @@
 import {
-    razeen_building_the_admin_image,
+    razeen_administration_image,
     razeen_clinic_image,
     razeen_k_market_image,
-    razeen_dining_hall_image,
-    razeen_kitchen_image,
+    razeen_kitchen_dining_1_image,
+    razeen_kitchen_dining_2_image,
     razeen_mosq_image,
-    razeen_razeen_stadiums_image,
+    razeen_play_ground_image,
     razeen_aryam_razeen_10_beds_image,
-    razeen_sadeem_aryam_sadeem_10_image,
     razeen_aryam_razeen_4_beds_image,
-    razeen_sadeem_aryam_sadeem_4_image,
     razeen_aryam_razeen_6_beds_image,
-    razeen_sadeem_aryam_sadeem_6_image
+    razeen_type_b_type_d_typea_1_image,
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { razeen_video } from "../exports/videos";
 import type { RazeenCommunityObject } from "../types/communities";
 
 export const RAZEEN: RazeenCommunityObject = {
     title: "Razeen Community",
-    video: communityVideo,
-    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
+    video: razeen_video,
+    communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {
         administration: {
@@ -33,7 +31,7 @@ export const RAZEEN: RazeenCommunityObject = {
                 { title: "Function", value: "Operations and Management" },
                 { title: "Access", value: "Controlled Access within Site" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [razeen_administration_image]
         },
 
         clinic: {
@@ -72,7 +70,7 @@ export const RAZEEN: RazeenCommunityObject = {
                 { title: "Function", value: "Meal Preparation and Dining" },
                 { title: "Access", value: "Distributed Across Site for Easy Reach" }
             ],
-            images: [razeen_dining_hall_image, razeen_kitchen_image]
+            images: [razeen_kitchen_dining_1_image, razeen_kitchen_dining_2_image]
         },
 
         mosque: {
@@ -98,7 +96,7 @@ export const RAZEEN: RazeenCommunityObject = {
                 { title: "Function", value: "Sports and Leisure" },
                 { title: "Access", value: "Central Outdoor Space" }
             ],
-            images: [razeen_razeen_stadiums_image]
+            images: [razeen_play_ground_image]
         },
 
         type_A_10_buildings: {
@@ -111,7 +109,10 @@ export const RAZEEN: RazeenCommunityObject = {
                 { title: "Room Types", value: "4x1 / 6x1 / 10x1" },
                 { title: "Floors", value: "G+2 Residential Buildings" }
             ],
-            images: [razeen_aryam_razeen_10_beds_image, razeen_sadeem_aryam_sadeem_10_image]
+            images: [
+                razeen_aryam_razeen_10_beds_image,
+                razeen_type_b_type_d_typea_1_image,
+            ]
         },
 
         type_B_2_buildings: {
@@ -124,7 +125,10 @@ export const RAZEEN: RazeenCommunityObject = {
                 { title: "Room Types", value: "4x1 / 6x1 / 10x1" },
                 { title: "Floors", value: "G+2 Residential Buildings" }
             ],
-            images: [razeen_aryam_razeen_4_beds_image, razeen_sadeem_aryam_sadeem_4_image]
+            images: [
+                razeen_aryam_razeen_4_beds_image,
+                razeen_type_b_type_d_typea_1_image,
+            ]
         },
 
         type_D_8_buildings: {
@@ -137,7 +141,10 @@ export const RAZEEN: RazeenCommunityObject = {
                 { title: "Room Types", value: "4x1 / 6x1 / 10x1" },
                 { title: "Floors", value: "G+2 Residential Buildings" }
             ],
-            images: [razeen_aryam_razeen_6_beds_image, razeen_sadeem_aryam_sadeem_6_image]
+            images: [
+                razeen_aryam_razeen_6_beds_image,
+                razeen_type_b_type_d_typea_1_image
+            ]
         }
     }
 };

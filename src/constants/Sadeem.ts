@@ -1,25 +1,23 @@
 import {
     razeen_sadeem_aryam_sadeem_4_image,
     razeen_sadeem_aryam_sadeem_6_image,
-    razeen_building_the_admin_image,
     razeen_clinic_image,
-    razeen_k_market_image,
-    razeen_dining_hall_image,
-    razeen_kitchen_image,
+    razeen_sadeem_commercial_shop_image,
+    razeen_kitchen_dining_1_image,
+    razeen_kitchen_dining_2_image,
     razeen_mosq_image,
-    razeen_razeen_stadiums_image,
-    razeen_aryam_razeen_10_beds_image,
-    razeen_sadeem_aryam_sadeem_10_image
+    razeen_play_ground_image,
+    razeen_sadeem_aryam_sadeem_10_image,
+    razeen_administration_image
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { sadeem_video } from "../exports/videos";
 import type { SadeemCommunityObject } from "../types/communities";
 
 export const SADEEM: SadeemCommunityObject = {
     title: "Sadeem Community",
-    video: communityVideo,
-    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
-
+    video: sadeem_video,
+    communityLogoUrl: "https://sdeiragroup.ae/en",
     data: {
         administration: {
             title: "ADMINISTRATION",
@@ -31,7 +29,7 @@ export const SADEEM: SadeemCommunityObject = {
                 { title: "Function", value: "Operations and Management" },
                 { title: "Access", value: "Controlled Access within Site" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [razeen_administration_image]
         },
 
         clinic: {
@@ -57,7 +55,7 @@ export const SADEEM: SadeemCommunityObject = {
                 { title: "Function", value: "Daily Goods and Convenience Retail" },
                 { title: "Access", value: "Central Location within Site" }
             ],
-            images: [razeen_k_market_image]
+            images: [razeen_sadeem_commercial_shop_image]
         },
 
         kitchen_and_dining: {
@@ -70,7 +68,10 @@ export const SADEEM: SadeemCommunityObject = {
                 { title: "Function", value: "Meal Preparation and Dining" },
                 { title: "Access", value: "Distributed Across Site for Easy Reach" }
             ],
-            images: [razeen_dining_hall_image, razeen_kitchen_image]
+            images: [
+                razeen_kitchen_dining_1_image,
+                razeen_kitchen_dining_2_image
+            ]
         },
 
         mosque: {
@@ -96,7 +97,7 @@ export const SADEEM: SadeemCommunityObject = {
                 { title: "Function", value: "Sports and Leisure" },
                 { title: "Access", value: "Central Outdoor Space" }
             ],
-            images: [razeen_razeen_stadiums_image]
+            images: [razeen_play_ground_image]
         },
 
         type_B_2_buildings: {
@@ -135,7 +136,7 @@ export const SADEEM: SadeemCommunityObject = {
                 { title: "Room Types", value: "4x1 / 6x1 / 10x1" },
                 { title: "Floors", value: "G+2 Residential Buildings" }
             ],
-            images: [razeen_aryam_razeen_10_beds_image, razeen_sadeem_aryam_sadeem_10_image]
+            images: [razeen_sadeem_aryam_sadeem_10_image]
         }
     }
 };

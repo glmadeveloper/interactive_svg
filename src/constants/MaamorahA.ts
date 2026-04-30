@@ -1,10 +1,12 @@
 import {
-    razeen_clinic_image,
-    razeen_kitchen_image,
-    razeen_dining_hall_image,
-    razeen_razeen_stadiums_image,
-    razeen_k_market_image,
-    razeen_building_the_admin_image
+    aryam_al_mamourah_a_clinic_mamouraa_a_image,
+    aryam_al_mamourah_a_dining_hall_mamouraa_a_image,
+    aryam_al_mamourah_a_playground_image,
+    aryam_al_mamourah_a_football_image,
+    aryam_al_mamourah_a_commercial_shop_retail_image,
+    aryam_al_mamourah_a_tech_supervisor_block_image,
+    aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
+    aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
 } from "../exports/images";
 
 import { communityVideo } from "../exports/videos";
@@ -13,7 +15,7 @@ import type { Maamorah_A_CommunityObject } from "../types/communities";
 export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
     title: "Maamorah A Community",
     video: communityVideo,
-    communityLogoUrl: "https://icad.glmaagencyprojects.com/en/",
+    communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {
         clinicOffice: {
@@ -26,7 +28,7 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Medical and Administrative Services" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [razeen_clinic_image]
+            images: [aryam_al_mamourah_a_clinic_mamouraa_a_image]
         },
 
         kitchenDining: {
@@ -39,7 +41,7 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Cooking and Dining" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [razeen_kitchen_image, razeen_dining_hall_image]
+            images: [aryam_al_mamourah_a_dining_hall_mamouraa_a_image]
         },
 
         playGround: {
@@ -52,7 +54,10 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Sports and Leisure" },
                 { title: "Access", value: "Central Outdoor Space" }
             ],
-            images: [razeen_razeen_stadiums_image]
+            images: [
+                aryam_al_mamourah_a_playground_image,
+                aryam_al_mamourah_a_football_image
+            ]
         },
 
         retail: {
@@ -65,7 +70,7 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Daily Goods and Services" },
                 { title: "Access", value: "Central Location" }
             ],
-            images: [razeen_k_market_image]
+            images: [aryam_al_mamourah_a_commercial_shop_retail_image]
         },
 
         techSupervisorBlock_A1: {
@@ -78,7 +83,7 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Staff and Supervisor Housing" },
                 { title: "Access", value: "Controlled Access" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [aryam_al_mamourah_a_tech_supervisor_block_image]
         },
 
         workersBlock_B1_B: {
@@ -91,7 +96,10 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Staff Accommodation" },
                 { title: "Access", value: "Internal Roads and Walkways" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [
+                aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
+                aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
+            ]
         },
 
         workersBlock_B1_C: {
@@ -104,7 +112,10 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Staff Accommodation" },
                 { title: "Access", value: "Internal Roads and Walkways" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [
+                aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
+                aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
+            ]
         },
 
         workersBlock_B2_B: {
@@ -117,7 +128,10 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Staff Accommodation" },
                 { title: "Access", value: "Internal Roads and Walkways" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [
+                aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
+                aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
+            ]
         },
 
         workersBlock_B2_C: {
@@ -130,7 +144,10 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
                 { title: "Function", value: "Staff Accommodation" },
                 { title: "Access", value: "Internal Roads and Walkways" }
             ],
-            images: [razeen_building_the_admin_image]
+            images: [
+                aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
+                aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
+            ]
         }
     }
 };
