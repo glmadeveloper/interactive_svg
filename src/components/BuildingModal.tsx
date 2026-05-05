@@ -128,19 +128,19 @@ export default function BuildingModal({
             case 1:
                 return (
                     <div className="w-full">
-                        <ImageItem src={images[0]} index={0} className="w-full h-[492px]" />
+                        <ImageItem src={images[0]} index={0} className="w-full h-[25vh]" />
                     </div>
                 );
             case 2:
                 return (
-                    <div className="grid grid-cols-[1.5fr_1fr] gap-[8px] h-[381px]">
+                    <div className="grid grid-cols-[1.5fr_1fr] gap-[8px] h-[clamp(260px,24.5vh,390px)]">
                         <ImageItem src={images[0]} index={0} className="h-full" />
                         <FloorPlanItem src={images[1]} index={1} className="h-full" />
                     </div>
                 );
             case 3:
                 return (
-                    <div className="grid grid-cols-[1.5fr_1fr] h-[381px]">
+                    <div className="grid grid-cols-[1.5fr_1fr] h-[clamp(260px,24.5vh,390px)]">
                         <div className="grid grid-cols-2 gap-[8px]">
                             <ImageItem src={images[0]} index={0} className="h-full" />
                             <ImageItem src={images[1]} index={1} className="h-full" />
@@ -150,33 +150,34 @@ export default function BuildingModal({
                 );
             case 4:
                 return (
-                    <div className="grid grid-cols-[2fr_1fr] gap-[8px]">
+                    <div className="grid grid-cols-[2fr_1fr] gap-[clamp(6px,0.3vw,8px)]">
 
                         {/* LEFT */}
                         <ImageItem
                             src={images[0]}
                             index={0}
-                            className="h-[381px]"
+                            className="h-[clamp(260px,24.5vh,390px)]"
                         />
 
                         {/* RIGHT */}
-                        <div className="grid grid-rows-3 gap-[8px] h-full">
-                            <ImageItem src={images[1]} index={1} className="h-[120px]" />
-                            <ImageItem src={images[2]} index={2} className="h-[120px]" />
-                            <ImageItem src={images[3]} index={3} className="h-[120px]" />
+                        <div className="grid grid-rows-3 gap-[clamp(6px,0.3vw,8px)] h-[clamp(260px,24.5vh,390px)]">
+                            <ImageItem src={images[1]} index={1} className="h-full" />
+                            <ImageItem src={images[2]} index={2} className="h-full" />
+                            <ImageItem src={images[3]} index={3} className="h-full" />
                         </div>
 
                     </div>
                 );
+
             case 5:
                 return (
-                    <div className="grid grid-cols-[1.5fr_0.8fr] gap-[8px] items-stretch">
-                        <div className="grid grid-rows-[2fr_1fr] gap-[8px]">
-                            <ImageItem src={images[0]} index={0} className="aspect-[593/274]" />
-                            <div className="grid grid-cols-3 gap-x-3">
-                                <ImageItem src={images[1]} index={1} className="aspect-[191/129]" />
-                                <ImageItem src={images[2]} index={2} className="aspect-[191/129]" />
-                                <ImageItem src={images[3]} index={3} className="aspect-[191/129]" />
+                    <div className="grid grid-cols-[1.5fr_0.8fr] gap-[clamp(6px,0.3vw,8px)] items-stretch h-[clamp(260px,24.5vh,390px)]">
+                        <div className="grid grid-rows-[2fr_1fr] gap-[clamp(6px,0.3vw,8px)] h-full">
+                            <ImageItem src={images[0]} index={0} className="w-full h-full" />
+                            <div className="grid grid-cols-3 gap-x-[clamp(6px,0.45vw,12px)] h-full">
+                                <ImageItem src={images[1]} index={1} className="w-full h-full" />
+                                <ImageItem src={images[2]} index={2} className="w-full h-full" />
+                                <ImageItem src={images[3]} index={3} className="w-full h-full" />
                             </div>
                         </div>
                         <FloorPlanItem src={images[4]} index={4} className="h-full" />
@@ -205,7 +206,7 @@ export default function BuildingModal({
             <div
                 onClick={(e) => e.stopPropagation()} // ✅ prevent inside clicks from closing
                 className={`
-                relative ml-[63px] w-[min(90vw,974px)] min-h-[600px] max-h-[98vh] flex flex-col rounded-[2.5rem] 
+                relative ml-[63px] w-[36.8vw] h-[66.5vh] flex flex-col rounded-[2.5rem] 
                 bg-(--modal-primary-color) shadow-[0_20px_80px_rgba(0,0,0,0.2)] text-[#555]
                 origin-left transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
                 overflow-hidden
@@ -222,15 +223,15 @@ export default function BuildingModal({
                     <X size={24} className="text-[#333]/60" />
                 </button>
 
-                <div className="flex-1 overflow-y-auto 2xl:overflow-visible p-10 custom-scrollbar-minimal">
-                    <div className="mb-12">
-                        <h1 className="font-['DIN_Next_LT_Arabic'] font-bold text-[54px] leading-[100%] tracking-[0%] uppercase text-(--primary-color)">
+                <div className="flex-1 overflow-y-auto p-10 custom-scrollbar-minimal">
+                    <div className="mb-[clamp(10px,0.64vw,17px)]">
+                        <h1 className="font-['DIN_Next_LT_Arabic'] font-bold text-[clamp(32px,2.04vw,54px)] leading-[100%] tracking-[0%] uppercase text-(--primary-color)">
                             {selectedBuildingData.title}
                         </h1>
                     </div>
 
-                    <div className="mb-8">
-                        <p className="font-din font-normal text-[23px] leading-[35px] tracking-[0%] text-[#666] max-w-[90%]">
+                    <div className="mb-[clamp(8px,0.45vw,12px)]">
+                        <p className="font-din font-normal text-[clamp(16px,0.87vw,23px)] leading-[clamp(24px,1.32vw,35px)] tracking-[0%] text-[#666] max-w-[90%]">
                             {selectedBuildingData.description}
                         </p>
                     </div>
@@ -240,32 +241,32 @@ export default function BuildingModal({
                             {renderImageGrid()}
                         </div>
                     </div>
-                    <hr className="mt-[49px] mb-[39px] border-0 border-t-2 border-[#58595B4D]" />
+                    <hr className="mt-[clamp(30px,1.85vw,49px)] mb-[clamp(24px,1.47vw,39px)] border-0 border-t-2 border-[#58595B4D]" />
                     <div>
                         {selectedBuildingData.category_name !== "" && (
-                            <h3 className="font-din font-bold text-[32px] leading-[100%] tracking-[0%] uppercase text-[#58595B] mb-8">
+                            <h3 className="font-din font-bold text-[clamp(22px,1.2vw,32px)] leading-[100%] tracking-[0%] uppercase text-[#58595B] mb-[clamp(20px,1.2vw,32px)]">
                                 {selectedBuildingData.category_name || "Properties"}
                             </h3>
                         )}
                         {selectedBuildingData.properties.length > 0 && (
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-2 gap-[clamp(8px,0.45vw,12px)]">
                                 {selectedBuildingData.properties.map((prop, idx) => {
                                     const icon = propertyIcons[prop.title];
                                     return (
                                         <div
                                             key={idx}
-                                            className="flex items-center justify-between p-4 bg-white rounded-xl border border-black/5 hover:border-(--primary-color)/20 transition-all group"
+                                            className="flex items-center justify-between p-[clamp(10px,0.6vw,16px)] bg-white rounded-[clamp(10px,0.45vw,12px)] border border-black/5 hover:border-(--primary-color)/20 transition-all group"
                                         >
-                                            <div className="flex gap-3 flex-col">
-                                                <span className="font-din font-medium text-[14px] leading-[100%] tracking-[0%] uppercase text-[#aaa] mb-0.5">
+                                            <div className="flex gap-[clamp(4px,0.25vw,8px)] flex-col">
+                                                <span className="font-din font-medium text-[clamp(10px,0.53vw,14px)] leading-[100%] tracking-[0%] uppercase text-[#aaa] mb-[clamp(1px,0.18vw,4px)]">
                                                     {prop.title}
                                                 </span>
-                                                <span className="font-din font-medium text-[27px] leading-[100%] tracking-[0%] uppercase text-[#333] group-hover:text-(--primary-color) transition-colors">
+                                                <span className="font-din font-medium text-[clamp(18px,1.02vw,27px)] leading-[100%] tracking-[0%] uppercase text-[#333] group-hover:text-(--primary-color) transition-colors">
                                                     {prop.value}
                                                 </span>
                                             </div>
-                                            <div className="p-2 rounded-lg">
-                                                <img src={icon} className="size-[44px]" alt="" />
+                                            <div className="p-[clamp(4px,0.3vw,8px)] rounded-[clamp(6px,0.3vw,8px)]">
+                                                <img src={icon} className="size-[clamp(28px,1.66vw,44px)]" alt="" />
                                             </div>
                                         </div>
                                     );
