@@ -79,7 +79,7 @@ export default function App() {
       )}
 
       {showScreensaver && !showIntroVideo && (
-        <div className="absolute inset-0 z-40 bg-black">
+        <div className="absolute inset-0 z-100 bg-black">
           <video
             className="w-full h-full object-cover"
             src={homeVideo}
