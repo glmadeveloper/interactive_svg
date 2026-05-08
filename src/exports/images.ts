@@ -24,21 +24,21 @@ import aryam_al_mamourah_b_retail_image from "/images/ARYAM-AL-MAMOURAH-“B”/
 // End Al Mamourah "B"
 // Start ICAD
 import home_all_image from "/images/Home/All.png";
-import icad_al_dhabi_studio_apartment_5_beds_each_side_image from "/images/ICAD/Al Dhabi -  STUDIO APARTMENT 5 Beds Each Side .png";
+import icad_al_dhabi_studio_apartment_5_beds_each_side_image from "/images/ICAD/Al Dhabi -  STUDIO APARTMENT 5 Beds Each Side Horizontal.png";
 import icad_al_dhabi_1_image from "/images/ICAD/Al Dhabi - 1.png";
 import icad_al_dhabi_2_image from "/images/ICAD/Al Dhabi - 2.png";
-import icad_al_mesk_s3_studio_5_beds_image from "/images/ICAD/AL MESK S3 STUDIO - 5 Beds.png";
-import icad_al_mesk_s4_studio_4_beds_image from "/images/ICAD/AL MESK S4 STUDIO - 4 Beds .png";
-import icad_al_murjan_bed_room_studio_3_pax_image from "/images/ICAD/AL MURJAN Bed Room Studio (3 Pax).png";
-import icad_al_murjan_bed_room_studio_4_pax_image from "/images/ICAD/AL MURJAN Bed Room Studio (4 Pax).png";
-import icad_al_naseem_2_beds_image from "/images/ICAD/Al Naseem 2 Beds .png";
-import icad_al_naseem_4_beds_image from "/images/ICAD/Al Naseem 4 Beds  .png";
-import icad_al_reem_5_beds_image from "/images/ICAD/AL REEM 5 Beds  .png";
-import icad_al_sahab_1_4_pax_bed_room_image from "/images/ICAD/AL SAHAB 1 (4 Pax) Bed Room.png";
-import icad_almesk_s5_2_br_type_4x_8_image from "/images/ICAD/Almesk S5 2-BR TYPE@4x-8.png";
-import icad_almesk_s6_2_br_type_4x_8_image from "/images/ICAD/Almesk S6 2-BR TYPE@4x-8.png";
-import icad_almesk_s7_2_br_type_4x_8_image from "/images/ICAD/Almesk S7 2-BR TYPE@4x-8.png";
-import icad_alyas_6_beds_image from "/images/ICAD/ALYAS  6 Beds .png";
+import icad_al_mesk_s3_studio_5_beds_image from "/images/ICAD/AL MESK S3 STUDIO - 5 Beds Horizontal.png";
+import icad_al_mesk_s4_studio_4_beds_image from "/images/ICAD/AL MESK S4 STUDIO - 4 Beds Horizontal.png";
+import icad_al_murjan_bed_room_studio_3_pax_image from "/images/ICAD/AL MURJAN Bed Room Studio (3 Pax) Horizontal.png";
+import icad_al_murjan_bed_room_studio_4_pax_image from "/images/ICAD/AL MURJAN Bed Room Studio (4 Pax) Horizontal.png";
+import icad_al_naseem_2_beds_image from "/images/ICAD/Al Naseem 2 Beds Horizontal.png";
+import icad_al_naseem_4_beds_image from "/images/ICAD/Al Naseem 4 Beds Horizontal.png";
+import icad_al_reem_5_beds_image from "/images/ICAD/AL REEM 5 Beds   Horizontal.png";
+import icad_al_sahab_1_4_pax_bed_room_image from "/images/ICAD/AL SAHAB 1 (4 Pax) Bed Room Horizontal.png";
+import icad_almesk_s5_2_br_type_4x_8_image from "/images/ICAD/Almesk S5 2-BR TYPE@4x-8 Horizontal.png";
+import icad_almesk_s6_2_br_type_4x_8_image from "/images/ICAD/Almesk S6 2-BR TYPE@4x-8 Horizontal.png";
+import icad_almesk_s7_2_br_type_4x_8_image from "/images/ICAD/Almesk S7 2-BR TYPE@4x-8 Horizontal.png";
+import icad_alyas_6_beds_image from "/images/ICAD/ALYAS  6 Beds  Horizontal.png";
 import icad_icad_mosuqe_image from "/images/ICAD/ICAD MOSUQE.png";
 import icad_icad_image from "/images/ICAD/ICAD.png";
 import icad_sports_hall_image from "/images/ICAD/sports hall.png";
