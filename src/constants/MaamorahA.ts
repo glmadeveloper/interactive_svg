@@ -2,19 +2,18 @@ import {
     aryam_al_mamourah_a_clinic_mamouraa_a_image,
     aryam_al_mamourah_a_dining_hall_mamouraa_a_image,
     aryam_al_mamourah_a_playground_image,
-    aryam_al_mamourah_a_football_image,
     aryam_al_mamourah_a_commercial_shop_retail_image,
     aryam_al_mamourah_a_tech_supervisor_block_image,
     aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { maamourah_A_video } from "../exports/videos";
 import type { Maamorah_A_CommunityObject } from "../types/communities";
 
 export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
     title: "Maamorah A Community",
-    video: communityVideo,
+    video: maamourah_A_video,
     communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {
@@ -56,7 +55,6 @@ export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
             ],
             images: [
                 aryam_al_mamourah_a_playground_image,
-                aryam_al_mamourah_a_football_image
             ]
         },
 

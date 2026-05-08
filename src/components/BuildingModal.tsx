@@ -362,7 +362,6 @@ export default function BuildingModal({
                                                 <span className="font-din font-medium text-[clamp(10px,0.53vw,14px)] leading-[100%] tracking-[0%] uppercase text-[#aaa] mb-[clamp(1px,0.18vw,4px)]">
                                                     {prop.title}
                                                 </span>
-
                                                 <span className="font-din font-medium text-[clamp(18px,1.02vw,27px)] leading-[100%] tracking-[0%] uppercase text-[#333] group-hover:text-(--primary-color) transition-colors">
                                                     {prop.value}
                                                 </span>
