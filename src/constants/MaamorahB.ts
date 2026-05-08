@@ -4,12 +4,12 @@ import {
     aryam_al_mamourah_b_basketball_image
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { maamourah_B_video } from "../exports/videos";
 import type { Maamorah_B_CommunityObject } from "../types/communities";
 
 export const MAAMORAH_B: Maamorah_B_CommunityObject = {
     title: "Maamorah B Community",
-    video: communityVideo,
+    video: maamourah_B_video,
     communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {

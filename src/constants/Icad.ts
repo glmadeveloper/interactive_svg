@@ -19,12 +19,12 @@ import {
     icad_al_murjan_bed_room_studio_4_pax_image
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { icad_video } from "../exports/videos";
 import type { IcadCommunityObject } from "../types/communities";
 
 export const ICAD: IcadCommunityObject = {
     title: "Icad Community",
-    video: communityVideo,
+    video: icad_video,
     communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {

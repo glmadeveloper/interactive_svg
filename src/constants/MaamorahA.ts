@@ -8,12 +8,12 @@ import {
     aryam_al_mamourah_a_aryam_al_mamourah_a_staff_accommodation4_image,
 } from "../exports/images";
 
-import { communityVideo } from "../exports/videos";
+import { maamourah_A_video } from "../exports/videos";
 import type { Maamorah_A_CommunityObject } from "../types/communities";
 
 export const MAAMOURAH_A: Maamorah_A_CommunityObject = {
     title: "Maamorah A Community",
-    video: communityVideo,
+    video: maamourah_A_video,
     communityLogoUrl: "https://sdeiragroup.ae/en",
 
     data: {
