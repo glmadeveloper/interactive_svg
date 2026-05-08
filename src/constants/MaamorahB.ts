@@ -1,6 +1,5 @@
 import {
     aryam_al_mamourah_b_mamouraa_b_shops_image,
-    aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_2_image,
     aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_image,
     aryam_al_mamourah_b_basketball_image
 } from "../exports/images";
@@ -71,7 +70,6 @@ export const MAAMORAH_B: Maamorah_B_CommunityObject = {
             ],
             images: [
                 aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_image,
-                aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_2_image
             ]
         },
 

@@ -128,7 +128,7 @@ export default function BuildingModal({
             case 1:
                 return (
                     <div className="w-full">
-                        <ImageItem src={images[0]} index={0} className="w-full h-[25vh]" />
+                        <ImageItem src={images[0]} index={0} className="w-full h-full" />
                     </div>
                 );
             case 2:
@@ -206,7 +206,7 @@ export default function BuildingModal({
             <div
                 onClick={(e) => e.stopPropagation()} // ✅ prevent inside clicks from closing
                 className={`
-                relative ml-[63px] w-[36.8vw] h-[66.5vh] flex flex-col rounded-[2.5rem] 
+                relative ml-[63px] w-[36.8vw] h-[72.5vh] flex flex-col rounded-[2.5rem] 
                 bg-(--modal-primary-color) shadow-[0_20px_80px_rgba(0,0,0,0.2)] text-[#555]
                 origin-left transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
                 overflow-hidden

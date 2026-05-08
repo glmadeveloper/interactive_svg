@@ -14,8 +14,7 @@ import aryam_al_mamourah_a_tech_supervisor_block_image from "/images/ARYAM-AL-MA
 import aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image from "/images/ARYAM-AL-MAMOURAH-“A”/WORKERS BLOCKS  B1-A, B1-B, B1-C, B2-A, B2-B, B2-C .png";
 // End Al Mamourah "A"
 // Start Al Mamourah "B"
-import aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_2_image from "/images/ARYAM-AL-MAMOURAH-“B”/ Block B1-C,Workers Block B2-C,Workers Block B1-B  (2).png";
-import aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/ Block B1-C,Workers Block B2-C,Workers Block B1-B  .png";
+import aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/Block B1-C,Workers Block B2-C,Workers Block B1-B.png";
 import aryam_al_mamourah_b_clinic_mamouraa_image from "/images/ARYAM-AL-MAMOURAH-“B”/ CLINIC. Mamouraa .png";
 import aryam_al_mamourah_b_aryam_al_mamourah_b_image from "/images/ARYAM-AL-MAMOURAH-“B”/ARYAM-AL-MAMOURAH-“B”.png";
 import aryam_al_mamourah_b_base_image_image from "/images/ARYAM-AL-MAMOURAH-“B”/base-image.png";
@@ -109,7 +108,6 @@ export {
     aryam_al_mamourah_a_playground_image,
     aryam_al_mamourah_a_tech_supervisor_block_image,
     aryam_al_mamourah_a_workers_blocks_b1_a_b1_b_b1_c_b2_a_b2_b_b2_c_image,
-    aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_2_image,
     aryam_al_mamourah_b_block_b1_c_workers_block_b2_c_workers_block_b1_b_image,
     aryam_al_mamourah_b_clinic_mamouraa_image,
     aryam_al_mamourah_b_aryam_al_mamourah_b_image,
